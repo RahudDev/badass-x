@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/badass-x/static/css/main.3afa3df2.css",
+    "main.js": "/badass-x/static/js/main.b6666630.js",
+    "index.html": "/badass-x/index.html",
+    "main.3afa3df2.css.map": "/badass-x/static/css/main.3afa3df2.css.map",
+    "main.b6666630.js.map": "/badass-x/static/js/main.b6666630.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3afa3df2.css",
+    "static/js/main.b6666630.js"
+  ]
+}
