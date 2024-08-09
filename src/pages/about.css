@@ -1,0 +1,22 @@
+.about-us.animate-slide {
+    animation: slideIn 1s forwards;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .about-us:nth-child(2) {
+    animation-delay: 0.5s; /* Delay for second card */
+  }
+  
+  .about-us:nth-child(3) {
+    animation-delay: 1s; /* Delay for third card */
+  }

@@ -1,0 +1,33 @@
+.login.animate-slide {
+    animation: slideIn 1s forwards;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .login:nth-child(2) {
+    animation-delay: 0.5s; /* Delay for second card */
+  }
+  
+  .login:nth-child(3) {
+    animation-delay: 1s; /* Delay for third card */
+  }
+  
+  .password-toggle2 {
+    position: absolute;
+    right: 1rem;
+    top: 55%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
