@@ -3,17 +3,17 @@
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "https://od.lk/s/NjFfODYzNjU4NzFf/eagle%20logo.png",
+      "src": "https://od.lk/s/NjFfODY1MTc4ODdf/eagle_logo-removebg-preview.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "https://od.lk/s/NjFfODYzNjU4NzFf/eagle%20logo.png",
+      "src": "https://od.lk/s/NjFfODY1MTc4ODdf/eagle_logo-removebg-preview.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "https://od.lk/s/NjFfODYzNjU4NzFf/eagle%20logo.png",
+      "src": "https://od.lk/s/NjFfODY1MTc4ODdf/eagle_logo-removebg-preview.png",
       "type": "image/png",
       "sizes": "512x512"
     }
