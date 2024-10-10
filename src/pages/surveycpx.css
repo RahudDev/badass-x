@@ -1,0 +1,19 @@
+.custom-btn {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px; /* Adjust for rounded corners if needed */
+    padding: 0.375rem 0.75rem; /* Adjust padding as necessary */
+    transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+    color: white;
+    text-decoration: none;
+}
+
+.custom-btn:focus, .custom-btn:active {
+    box-shadow: none; /* Remove default focus outline if needed */
+}
