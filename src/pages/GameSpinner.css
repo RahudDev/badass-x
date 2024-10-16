@@ -1,0 +1,120 @@
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative; /* Position relative to allow absolute positioning of the pointer */
+  }
+  
+  
+  .spinner {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 10px solid gold; /* Gold outer circle */
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 3s ease-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+  }
+  
+  .spinner-segments {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .segment {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: transparent;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    transform-origin: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .segment-0 {
+    background-color: #343a40; /* Dark gray for "0" */
+    transform: rotate(0deg);
+  }
+  
+  .segment-1 {
+    background-color: #28a745; /* Green */
+    transform: rotate(60deg);
+  }
+  
+  .segment-2 {
+    background-color: #17a2b8; /* Cyan */
+    transform: rotate(120deg);
+  }
+  
+  .segment-3 {
+    background-color: #ffc107; /* Yellow */
+    transform: rotate(180deg);
+  }
+  
+  .segment-4 {
+    background-color: #fd7e14; /* Orange */
+    transform: rotate(240deg);
+  }
+  
+  .segment-5 {
+    background-color: #dc3545; /* Red */
+    transform: rotate(300deg);
+  }
+  
+  /* Spin Button Styling */
+  .spin-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .spin-button:hover {
+    background-color: #218838;
+  }
+  
+  .spin-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Prize Result Styling */
+  .prize-result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745;
+  }
+  
+  .pointer-indicator {
+    position: absolute;
+    top: -30px; /* Adjust to position above the spinner */
+    left: 50%;
+    transform: translateX(-50%); /* Center the indicator */
+    font-size: 24px; /* Adjust size as necessary */
+    color: #ff0000; /* Change color as desired */
+    z-index: 10; /* Ensure it's above other elements */
+  }
+
+  .expected-prize {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  

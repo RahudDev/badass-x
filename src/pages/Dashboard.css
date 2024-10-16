@@ -1,0 +1,107 @@
+/* Hide scrollbar */
+.scroll-container {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+/* Scroll button styling */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  z-index: 1;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Left button on the left side */
+.scroll-btn.left {
+  left: 0;
+}
+
+/* Right button on the right side */
+.scroll-btn.right {
+  right: 0;
+}
+
+
+/* Ensure no margin or padding between survey cards */
+.row {
+  margin: 0; /* Remove default margin from row */
+  padding: 0;
+}
+
+.card {
+  margin: 0; /* Remove margin from each card */
+  padding: 0; /* Optional: Remove padding if you want cards to stick closely */
+}
+
+.card-body {
+  padding: 0.5rem; /* Adjust padding inside the card body if necessary */
+}
+
+/* Optional: If you want to set specific height for cards for uniformity */
+.card {
+  height: 100%; /* Ensures all cards have the same height */
+}
+
+/* Add this to your CSS file */
+.card-text-black {
+  color: black;
+}
+
+.card-text-i {
+  color : #28a745;
+}
+
+.modal img {
+  border-radius: 8px;
+}
+
+.title-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Add this CSS in your stylesheet */
+.blur-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(1px);
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1040;
+}
+
+.modal {
+  z-index: 1050;
+}
+
+/* General styles for dashboard on mobile */
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,196 @@
+.live-updates-container {
+  position: fixed;
+  top: 60px; /* Adjust based on your header height */
+  right: 0;
+  width: 100%; /* Full width */
+  background-color: transparent; /* Transparent background */
+  z-index: 1000; /* On top of other content */
+  border-bottom: 1px solid #ddd;
+  padding: 5px; /* Adjust padding */
+  height: 60px; /* Limit height */
+  overflow-y: hidden; /* No vertical scrolling */
+  overflow-x: hidden; /* Enable horizontal scrolling */
+  display: flex; /* Align items in a row */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+
+.toggle-button {
+  padding: 10px 15px;
+  margin-bottom: 10px; /* Space between button and updates */
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white; /* White text */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.toggle-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.updates-grid {
+  display: flex; /* Use flexbox to align items in a row */
+  flex-wrap: nowrap; /* Prevent items from wrapping to a new row */
+  overflow-x: hidden; /* Allow horizontal scrolling if needed */
+  gap: 10px; /* Space between items */
+  cursor: grab;
+}
+
+.updates-grid:active {
+  cursor: grabbing;
+}
+
+.update-item {
+  flex: 0 0 auto; /* Prevent the items from shrinking or growing */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d6d0d0;
+  border-radius: 10px;
+  padding: 5px; /* Adjust padding */
+  transition: transform 0.3s;
+  min-width: 150px; /* Set minimum width for each item */
+  height: 40px; /* Adjust height */
+  margin-right: 2px; /* Space between items */
+  animation: slide-in 1s ease-out forwards; /* Slide-in animation */
+  cursor: pointer;
+}
+
+.update-item:hover {
+  transform: translateY(-5px);
+}
+
+.update-left {
+  display: flex;
+  align-items: center;
+}
+
+.icon-square {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ececec;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.update-name {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.update-description {
+  max-width: 90px; /* Set the maximum width for the description */
+  white-space: nowrap; /* Prevent the text from wrapping to the next line */
+  overflow: hidden; /* Hide any overflowed text */
+  text-overflow: ellipsis; /* Add the ellipsis (...) when text overflows */
+  font-size: 13px;
+  color: black;
+}
+
+.points-square {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  border-radius: 8px;
+  margin-left: 10px;
+  font-weight: bold;
+  color: white;
+  font-size: 13px;
+}
+
+/* LiveUpdates.css */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.close-popup-btn {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-popup-btn:hover {
+  background-color: #007bff;
+}
+
+
+/* Keyframes for sliding in from the left */
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%); /* Start from outside on the left */
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    transform: translateX(0); /* Move to original position */
+    opacity: 1; /* Fade in */
+  }
+}
+
+/* Media Queries for Mobile Screens */
+@media (max-width: 600px) {
+  .live-updates-container {
+    padding: 3px; /* Reduce padding */
+    height: 43px; /* Reduce height */
+  }
+
+  .toggle-button {
+    font-size: 14px; /* Smaller font size */
+    padding: 8px 10px; /* Adjust padding */
+  }
+
+  .update-item {
+    min-width: 120px; /* Set smaller minimum width for items */
+    height: 35px; /* Adjust height */
+    padding: 3px; /* Adjust padding */
+  }
+
+  .update-name {
+    font-size: 12px; /* Smaller font size */
+  }
+
+  .update-description {
+    font-size: 12px; /* Smaller font size */
+    max-width: 70px; /* Adjust max-width */
+  }
+
+  .points-square {
+    width: 40px; /* Smaller width */
+    height: 25px; /* Smaller height */
+    font-size: 9px; /* Smaller font size */
+  }
+}
