@@ -1,0 +1,22 @@
+.offer-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .offer-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .modal img {
+    border-radius: 8px;
+  }
+  
+  .title-ellipsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+
+  
