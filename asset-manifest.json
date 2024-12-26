@@ -1,17 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.9adad737.css",
-    "main.js": "/static/js/main.5d508f78.js",
+    "main.css": "/static/css/main.1a78bbc1.css",
+    "main.js": "/static/js/main.a3af3f15.js",
     "static/js/842.82b01c0f.chunk.js": "/static/js/842.82b01c0f.chunk.js",
     "static/js/950.d3654404.chunk.js": "/static/js/950.d3654404.chunk.js",
+    "static/media/games_offers.png": "/static/media/games_offers.dcbee4adbcd29ced4ba7.png",
+    "static/media/survey_offers.jpeg": "/static/media/survey_offers.2cff93b3dbad5f11bdfb.jpeg",
+    "static/media/dollarblack.png": "/static/media/dollarblack.9102e6efb7af43ceaa1f.png",
+    "static/media/rewardhand.png": "/static/media/rewardhand.86a78a226f4f8a990021.png",
+    "static/media/litecoin_logo.png": "/static/media/litecoin_logo.438599a1d4c1e9524ed4.png",
+    "static/media/smile_emoji.jpg": "/static/media/smile_emoji.401fe6fc0ac1cbcdbd3c.jpg",
+    "static/media/signup_offers.jpg": "/static/media/signup_offers.dcff3bf2b3f37efdbfd0.jpg",
+    "static/media/playstore_logo.png": "/static/media/playstore_logo.ca3220aa93eb1ac56ddd.png",
+    "static/media/person_single_icon.png": "/static/media/person_single_icon.69b24a0af5df9b2c088d.png",
+    "static/media/uk_flag.jpg": "/static/media/uk_flag.3e8216de05f79ab22873.jpg",
+    "static/media/x_logo.webp": "/static/media/x_logo.b14ac906ddcde8de4f97.webp",
+    "static/media/facebook_logo.webp": "/static/media/facebook_logo.85b1b1cd8dc4fca187ce.webp",
     "index.html": "/index.html",
-    "main.9adad737.css.map": "/static/css/main.9adad737.css.map",
-    "main.5d508f78.js.map": "/static/js/main.5d508f78.js.map",
+    "main.1a78bbc1.css.map": "/static/css/main.1a78bbc1.css.map",
+    "main.a3af3f15.js.map": "/static/js/main.a3af3f15.js.map",
     "842.82b01c0f.chunk.js.map": "/static/js/842.82b01c0f.chunk.js.map",
     "950.d3654404.chunk.js.map": "/static/js/950.d3654404.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9adad737.css",
-    "static/js/main.5d508f78.js"
+    "static/css/main.1a78bbc1.css",
+    "static/js/main.a3af3f15.js"
   ]
 }
