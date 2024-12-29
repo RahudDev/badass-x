@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8ad898a7.css",
-    "main.js": "/static/js/main.e63d2e06.js",
+    "main.css": "/static/css/main.bed338e3.css",
+    "main.js": "/static/js/main.be3e021e.js",
     "static/js/842.82b01c0f.chunk.js": "/static/js/842.82b01c0f.chunk.js",
     "static/js/950.d3654404.chunk.js": "/static/js/950.d3654404.chunk.js",
     "static/media/games_offers.png": "/static/media/games_offers.dcbee4adbcd29ced4ba7.png",
@@ -15,13 +15,13 @@
     "static/media/person_single_icon.png": "/static/media/person_single_icon.69b24a0af5df9b2c088d.png",
     "static/media/uk_flag.jpg": "/static/media/uk_flag.3e8216de05f79ab22873.jpg",
     "index.html": "/index.html",
-    "main.8ad898a7.css.map": "/static/css/main.8ad898a7.css.map",
-    "main.e63d2e06.js.map": "/static/js/main.e63d2e06.js.map",
+    "main.bed338e3.css.map": "/static/css/main.bed338e3.css.map",
+    "main.be3e021e.js.map": "/static/js/main.be3e021e.js.map",
     "842.82b01c0f.chunk.js.map": "/static/js/842.82b01c0f.chunk.js.map",
     "950.d3654404.chunk.js.map": "/static/js/950.d3654404.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ad898a7.css",
-    "static/js/main.e63d2e06.js"
+    "static/css/main.bed338e3.css",
+    "static/js/main.be3e021e.js"
   ]
 }
