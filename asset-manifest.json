@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6a3ca785.css",
-    "main.js": "/static/js/main.86cd07d9.js",
+    "main.js": "/static/js/main.bcfae456.js",
     "static/js/842.82b01c0f.chunk.js": "/static/js/842.82b01c0f.chunk.js",
     "static/js/950.d3654404.chunk.js": "/static/js/950.d3654404.chunk.js",
     "static/media/games_offers.png": "/static/media/games_offers.dcbee4adbcd29ced4ba7.png",
@@ -16,12 +16,12 @@
     "static/media/uk_flag.jpg": "/static/media/uk_flag.3e8216de05f79ab22873.jpg",
     "index.html": "/index.html",
     "main.6a3ca785.css.map": "/static/css/main.6a3ca785.css.map",
-    "main.86cd07d9.js.map": "/static/js/main.86cd07d9.js.map",
+    "main.bcfae456.js.map": "/static/js/main.bcfae456.js.map",
     "842.82b01c0f.chunk.js.map": "/static/js/842.82b01c0f.chunk.js.map",
     "950.d3654404.chunk.js.map": "/static/js/950.d3654404.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6a3ca785.css",
-    "static/js/main.86cd07d9.js"
+    "static/js/main.bcfae456.js"
   ]
 }
