@@ -1,0 +1,47 @@
+.toggle-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px; /* Reduced margin for smaller mobile view */
+  width: 150px; /* Reduced width for mobile */
+  height: 40px;
+}
+
+.toggle-button input {
+  display: none; /* Hide the default checkbox */
+}
+
+.slider {
+  position: relative;
+  width: 40px; /* Reduced width for smaller toggle */
+  height: 20px; /* Reduced height for smaller toggle */
+  background: #ccc;
+  border-radius: 20px; /* Adjusted border radius */
+  margin-right: 10px;
+  transition: background 0.2s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  width: 18px; /* Reduced width for the toggle knob */
+  height: 18px; /* Reduced height for the toggle knob */
+  left: 1px; /* Adjusted position for the knob */
+  bottom: 1px; /* Adjusted position for the knob */
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+input:checked + .slider {
+  background: #4caf50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px); /* Adjusted translation for smaller toggle */
+}
+
+.label {
+  margin-left: 5px; /* Reduced margin for label */
+  font-size: 12px; /* Reduced font size for mobile */
+}

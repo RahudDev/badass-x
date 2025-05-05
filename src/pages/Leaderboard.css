@@ -1,0 +1,152 @@
+/* General leaderboard container styling */
+.leaderboard-container {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Champion Ladder Styles */
+  .champion-ladder .card {
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+    position: relative;
+  }
+  
+  /* Star Icon Styles */
+  .star-icon {
+    font-size: 2rem;
+    position: absolute;
+    top: -30px; /* Adjust the distance above the card */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .star-gold {
+    color: #ffd700;
+  }
+  
+  .star-silver {
+    color: #c0c0c0;
+  }
+  
+  .star-bronze {
+    color: #cd7f32;
+  }
+  
+  /* Different heights for the champion ladder */
+  .ladder-1 {
+    height: 220px;
+    background-color: #ffd700;
+    color: #ffffff;
+  }
+  
+  .ladder-2 {
+    height: 180px;
+    background-color: #c0c0c0;
+    color: #ffffff;
+  }
+  
+  .ladder-3 {
+    height: 160px;
+    background-color: #cd7f32;
+    color: #ffffff;
+  }
+  
+  .champion-ladder .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-oval {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .profile-oval img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Table Styles */
+  .table thead {
+    background-color: #343a40;
+    color: #ffffff;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .rank-1 td {
+    font-weight: bold;
+    background-color: rgba(255, 215, 0, 0.2);
+  }
+  
+  .rank-2 td {
+    font-weight: bold;
+    background-color: rgba(192, 192, 192, 0.2);
+  }
+  
+  .rank-3 td {
+    font-weight: bold;
+    background-color: rgba(205, 127, 50, 0.2);
+  }
+  
+  .badge-gold {
+    background-color: #ffd700;
+    color: #ffffff;
+  }
+  
+  .badge-silver {
+    background-color: #c0c0c0;
+    color: #ffffff;
+  }
+  
+  .badge-bronze {
+    background-color: #cd7f32;
+    color: #ffffff;
+  }
+  
+
+  @media (max-width: 800px) {
+  .champion-ladder .card {
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+    position: relative;
+  }
+
+  .table td {
+    font-size: 12px;
+  }
+  .ladder-1 {
+    height: 250px;
+    background-color: #ffd700;
+    color: #ffffff;
+  }
+  
+  .ladder-2 {
+    height: 230px;
+    background-color: #c0c0c0;
+    color: #ffffff;
+  }
+  
+  .ladder-3 {
+    height: 210px;
+    background-color: #cd7f32;
+    color: #ffffff;
+  }
+  .timer-container {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">freecuansite</string>
+    <string name="title_activity_main">freecuansite</string>
+    <string name="package_name">freecuansite.app</string>
+    <string name="custom_url_scheme">freecuansite.app</string>
+    <string name="default_web_client_id">684135355283-64u99lsgun2liict6atftk7gdtdkt9da.apps.googleusercontent.com</string>
+</resources>

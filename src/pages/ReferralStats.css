@@ -1,0 +1,174 @@
+.referral-stats-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    padding: 10px;
+  }
+  
+  .referral-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .referral-table th, .referral-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .referral-table th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .referral-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .referral-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .referral-table td {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .no-referrals-message {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+  }
+
+  .summary-dashboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .summary-item {
+    text-align: center;
+  }
+  
+  .summary-item h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .summary-item p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #009879;
+  }
+
+  .pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination-button.disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .pagination-info {
+    font-size: 14px;
+    color: #555;
+  }
+
+  
+
+  /* General Mobile View Adjustments */
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .referral-stats-container {
+    padding: 15px;
+  }
+
+  /* Responsive Table - 100% Width and No Overflow */
+  .referral-table {
+    width: 100%;
+    border-collapse: collapse; /* Remove gaps between cells */
+  }
+
+  .referral-table th,
+  .referral-table td {
+    padding: 8px;
+    font-size: 7px;
+    text-align: left;
+    word-wrap: break-word; /* Allow content to wrap inside cells */
+    white-space: normal; /* Allow wrapping to prevent overflow */
+    border: 1px solid #ddd; /* Add border for better structure */
+  }
+
+  /* Adjust Header Font */
+  h1 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  /* Summary Item Font Sizes */
+  .summary-item h4 {
+    font-size: 9px;
+    text-align: center;
+  }
+
+  .summary-item p {
+    font-size: 7px;
+    text-align: center;
+  }
+
+  /* No Referrals Message */
+  .no-referrals-message {
+    font-size: 7px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Pagination Controls */
+  .pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  .pagination-button {
+    padding: 6px 10px;
+    font-size: 7px;
+  }
+
+  .pagination-info {
+    font-size: 7px;
+  }
+}
+
+
+  

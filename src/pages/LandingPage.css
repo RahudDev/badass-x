@@ -1,0 +1,500 @@
+/* Landing Page Welcome Section */
+.landing-page-welcome {
+  overflow: hidden;
+  background: linear-gradient(to bottom, #ffffff, #e6f7ff 60%, #b0d8ff);
+  min-height: 100vh;
+  max-width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-left: 3%; /* Add space from the left */
+  padding-top: -5%; /* Add space from the top */
+  gap : 40px;
+}
+
+
+
+/* Left Section: Text Content */
+.text-content-mockup {
+  flex: 1; /* Take up available space */
+  max-width: 45%;
+}
+
+.text-content-mockup h {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.text-content-mockup p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.text-content-mockup .btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+
+/* Right Section: Image Content */
+.image-content-mockup {
+  flex: 1;
+  text-align: center;
+  max-width: 55%;
+}
+
+.image-content-mockup img {
+  width: 100%;
+  max-height: 750px;
+  object-fit: contain;
+}
+
+/* Alternating Gradient Animation at Bottom */
+.landing-page-welcome::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: radial-gradient(circle at 20% 80%, 
+    #004080 20%, 
+    transparent 60%
+  ),
+  radial-gradient(circle at 80% 90%, 
+    #0055aa 20%, 
+    transparent 60%
+  ),
+  radial-gradient(circle at 50% 95%, 
+    #0066cc 25%, 
+    transparent 70%
+  ),
+  radial-gradient(circle at 30% 85%, 
+    #4f81c7 25%, 
+    transparent 70%
+  ),
+  radial-gradient(circle at 70% 75%, 
+    #2a2d34 30%, 
+    transparent 80%
+  );
+  animation: alternatingFlame 6s ease-in-out infinite alternate;
+  z-index: -1;
+  filter: blur(25px); /* Softens edges */
+  opacity: 0.8;
+}
+
+/* Alternating Flame Animation Keyframes */
+@keyframes alternatingFlame {
+  0% {
+    background: radial-gradient(circle at 20% 80%, 
+      #004080 20%, transparent 60%
+    ),
+    radial-gradient(circle at 80% 90%, 
+      #0055aa 20%, transparent 60%
+    ),
+    radial-gradient(circle at 50% 95%, 
+      #0066cc 25%, transparent 70%
+    );
+    opacity: 0.9;
+  }
+  50% {
+    background: radial-gradient(circle at 20% 80%, 
+      #ffffff 20%, transparent 60%
+    ),
+    radial-gradient(circle at 80% 90%, 
+      #e6f7ff 20%, transparent 60%
+    ),
+    radial-gradient(circle at 50% 95%, 
+      #b0d8ff 25%, transparent 70%
+    );
+    opacity: 0.85;
+  }
+  100% {
+    background: radial-gradient(circle at 20% 80%, 
+      #004080 20%, transparent 60%
+    ),
+    radial-gradient(circle at 80% 90%, 
+      #0055aa 20%, transparent 60%
+    ),
+    radial-gradient(circle at 50% 95%, 
+      #0066cc 25%, transparent 70%
+    );
+    opacity: 0.9;
+  }
+}
+
+
+
+
+
+.image-gradient-bg {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.image-gradient-bg::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle at center, 
+   #7e22ce  0%,        /* Dark Blue */
+    #007bff 25%,       /* Light Blue */
+    #d946ef 50%,       /* Medium Blue */
+    #1e3a8a 75%,       /* Dark Purple */
+   #4c1d95 100%),     /* Purple */
+  radial-gradient(circle at top left, 
+    #1e3a8a 0%,        /* Dark Blue */
+    #007bff 40%,       /* Light Blue */
+    #ec4899 70%,       /* Medium Blue */
+    #4c1d95 90%,       /* Dark Purple */
+    #7e22ce 100%),     /* Purple */
+  radial-gradient(circle at bottom right, 
+    #d946ef 0%,        /* Pink */
+    #f472b6 25%,       /* Light Pink */
+    #ec4899 50%,       /* Dark Pink */
+    #8b5cf6 75%,       /* Light Purple */
+    #9333ea 100%);     /* Dark Purple */
+  background-size: 300% 300%;
+  background-position: 0% 50%, 100% 50%, 50% 100%;
+  animation: blobAnimation 8s infinite ease-in-out, gradientAnimation 30s infinite ease-in-out;
+  border-radius: 50% 35% 50% 35% / 40% 50% 35% 60%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  
+}
+
+
+
+/* Image Styling */
+.image-gradient-bg img {
+  max-width: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%, 100% 50%, 50% 100%;
+  }
+  15% {
+    background-position: 30% 60%, 70% 30%, 60% 80%;
+  }
+  25% {
+    background-position: 100% 50%, 0% 50%, 100% 0%;
+  }
+  35% {
+    background-position: 75% 20%, 50% 70%, 30% 40%;
+  }
+  50% {
+    background-position: 0% 50%, 100% 50%, 50% 100%;
+  }
+  60% {
+    background-position: 50% 40%, 30% 80%, 60% 20%;
+  }
+  75% {
+    background-position: 100% 50%, 0% 50%, 100% 0%;
+  }
+  85% {
+    background-position: 10% 80%, 60% 30%, 80% 50%;
+  }
+  100% {
+    background-position: 0% 50%, 100% 50%, 50% 100%;
+  }
+}
+
+
+
+
+/* Enhanced Blob Shape Animation with Tentacle Effect */
+@keyframes blobAnimation {
+  0% {
+    border-radius: 50% 35% 50% 35% / 40% 50% 35% 60%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  20% {
+    border-radius: 60% 30% 55% 25% / 35% 65% 30% 70%;
+    transform: translate(-50%, -50%) scale(1.05) rotate(2deg);
+  }
+  40% {
+    border-radius: 45% 60% 35% 55% / 50% 40% 60% 35%;
+    transform: translate(-50%, -50%) scale(1.08) rotate(-2deg);
+  }
+  60% {
+    border-radius: 55% 45% 60% 30% / 45% 55% 35% 65%;
+    transform: translate(-50%, -50%) scale(1.1) rotate(1deg);
+  }
+  80% {
+    border-radius: 50% 40% 55% 45% / 55% 35% 65% 45%;
+    transform: translate(-50%, -50%) scale(1.05) rotate(-1deg);
+  }
+  100% {
+    border-radius: 50% 35% 50% 35% / 40% 50% 35% 60%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
+/*here the end*/
+
+
+
+
+
+@keyframes dropIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .drop-in {
+    animation: dropIn 1s ease-out forwards;
+    opacity: 0; /* Start with invisible text */
+  }
+  
+  .delay-1 {
+    animation-delay: 0.5s;
+  }
+  
+  .delay-2 {
+    animation-delay: 1s;
+  }
+
+  .delay-5 {
+    animation-delay: 1.5s;
+  }
+  
+  /* Additional styles for the landing page */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h, h2, h5 {
+    color: #333;
+  }
+  
+  .nav-link {
+    font-weight: bold;
+  }
+  
+  .card {
+    margin-bottom: 1rem;
+  }
+  
+  main {
+    padding: 2rem 0;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  .container{
+    position: relative;
+  }
+  
+  .jumbotron {
+    color: rgb(7, 7, 7);
+  }
+  
+  #sidebar-wrapper {
+    width: 250px;
+    height: 100%;
+  }
+  
+  .sidebar-heading {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .list-group-item {
+    padding: 1rem 1.5rem;
+  }
+  
+  /* Landing Page Styles */
+  .landing-page {
+    color: rgb(241, 238, 238);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  
+  .landing-page .container {
+    text-align: center;
+  }
+  
+  .landing-page .display-4 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .landing-page .lead {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color : black;
+  }
+  
+  .landing-page .btn-primary {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .section-container2 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Space between sections */
+  .section-container2:not(:last-child) {
+    margin-bottom: 150px; /* Adds space between sections */
+  }
+
+
+  
+  /* Default: Hide the <br> for normal zoom (under 133%) */
+.word-break-line {
+  display: none; /* This hides the <br> by default */
+  }
+
+
+
+ /* Zoom Level: 133% - 149% */
+@media (min-resolution: 127dpi) and (max-resolution: 143dpi),
+(min-resolution: 1.33dppx) and (max-resolution: 1.49dppx) {
+.word-break-line {
+display: block; /* Force the <br> to be visible at these zoom levels */
+}
+
+.image-gradient-bg::before {
+  width : 70%;
+  height: 70%;
+}
+}
+
+/* Zoom Level: 150% - 199% */
+@media (min-resolution: 144dpi) and (max-resolution: 191dpi),
+(min-resolution: 1.5dppx) and (max-resolution: 1.99dppx) {
+.word-break-line {
+display: block; /* Force the <br> to be visible at these zoom levels */
+}
+
+.text-content-mockup h {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.image-gradient-bg::before {
+  width : 70%;
+  height: 70%;
+}
+}
+
+/* Zoom Level: 200% - 249% */
+@media (min-resolution: 192dpi) and (max-resolution: 239dpi),
+(min-resolution: 2dppx) and (max-resolution: 2.49dppx) {
+.word-break-line {
+display: block; /* Force the <br> to be visible at these zoom levels */
+}
+
+.text-content-mockup h {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.image-gradient-bg::before {
+  width : 70%;
+  height: 70%;
+}
+
+}
+
+
+
+
+  
+  
+  @media (max-width: 767px) {
+    .how-it-works, .user-reviews {
+      padding: 0 15px;
+    }
+   
+  }
+
+  
+
+  @media (max-width: 768px) {
+  .landing-page-welcome {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 15% 3%;
+    gap: 5px;
+  }
+
+  .text-content-mockup {
+    order: 2; /* Text appears below the image */
+    max-width: 100%;
+  }
+
+  .text-content-mockup h {
+    font-size: 2rem;
+  }
+
+  .text-content-mockup p {
+    font-size: 1rem;
+  }
+
+  .text-content-mockup .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+
+  .image-content-mockup {
+    order: 1; /* Image appears on top */
+    max-width: 100%;
+  }
+
+  .image-content-mockup img {
+    max-width: 500px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+
+  .image-gradient-bg::before {
+    width: 70vw;
+    height: 70vw;
+    max-width: 300px;
+    max-height: 300px;
+    top: 45%;
+    left: 50%;
+    border-radius: 50% 40% 45% 40% / 50% 40% 35% 60%;
+  }
+
+  .image-gradient-bg::before {
+    animation: blobAnimation 10s infinite ease-in-out, gradientAnimation 40s infinite ease-in-out;
+  }
+
+  .image-gradient-bg::after {
+    animation: blobAnimation 15s infinite ease-in-out reverse, gradientAnimation 40s infinite ease-in-out;
+  }
+
+  .delay-1{
+    animation-delay: 1s;
+  }
+
+  .delay-5{
+    animation-delay: 0.5s;
+  }
+
+}

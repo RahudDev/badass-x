@@ -1,0 +1,58 @@
+/* PlaceholderCard.css */
+.placeholder-card {
+    background-color: white; /* White background */
+    height: 100%; /* Fill available height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: shadowAnimation 1.5s infinite alternate; /* Apply animation */
+    border-radius: 5px;
+}
+
+.placeholder-image {
+    background-color: #f0f0f0; /* Light grey for image placeholder */
+    height: 200px; /* Fixed height for image area */
+    margin-bottom: 0.5rem; /* Space between image and body */
+}
+
+.placeholder-body {
+    padding: 0.5rem; /* Padding for the body */
+}
+
+.placeholder-title,
+.placeholder-rating,
+.placeholder-points {
+    background-color: #e0e0e0; /* Grey background for placeholders */
+    height: 1rem; /* Height for title and rating */
+    margin: 0.2rem 0; /* Space between text lines */
+    border-radius: 0.2rem; /* Slightly rounded corners */
+}
+
+.placeholder-title {
+    width: 80%; /* Title width */
+}
+
+.placeholder-rating {
+    width: 50%; /* Rating width */
+}
+
+.placeholder-points {
+    width: 70%; /* Points width */
+}
+
+/* Animation Keyframes */
+@keyframes shadowAnimation {
+    0% {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.2); /* Initial shadow */
+    }
+    100% {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 5px 30px rgba(0, 0, 0, 0.2); /* Shadow on the right */
+    }
+}
+
+@media (max-width: 768px) {
+    .placeholder-image {
+        height: 70px;
+    }
+
+}

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "836329605056",
+    "project_id": "freecuan-7db69",
+    "storage_bucket": "freecuan-7db69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836329605056:android:8c83b50bbef845c72d6a25",
+        "android_client_info": {
+          "package_name": "freecuansite.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyr7blG2pgzvTgBbFApfpQpzjH3Q4aDDY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

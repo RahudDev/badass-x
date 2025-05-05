@@ -1,0 +1,73 @@
+/* Toggle Switch Container */
+.toggle-switch {
+    position: absolute; /* Make the switch absolute to position it */
+    bottom: 1px; /* Position it 10px from the bottom */
+    left: 50%; /* Align it to the center horizontally */
+    transform: translateX(-50%); /* Adjust for perfect centering */
+    width: 60px;
+    height: 34px;
+    top: 5%;
+  }
+  
+  /* Checkbox Input */
+  .toggle-switch-checkbox {
+    display: none;
+
+  }
+  
+  /* Switch Label */
+  .toggle-switch-label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Inner Part of the Switch */
+  .toggle-switch-inner {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 34px;
+    transition: background-color 0.3s ease-in-out;
+    top: 70%;
+  }
+  
+  /* Switch Knob */
+  .toggle-switch-switch {
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* When the Checkbox is Checked */
+  .toggle-switch-checkbox:checked + .toggle-switch-label {
+    background-color: #28a745; /* Green color when widget is visible */
+  }
+  
+  .toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-switch {
+    transform: translateX(26px); /* Moves the knob to the right */
+  }
+
+  @media (max-width: 768px) {
+
+    .toggle-switch {
+      height: 24px;
+      width: 50px;
+    }
+
+    .toggle-switch-switch {
+      width: 18px;
+      height: 18px;
+    }
+
+  }
+  

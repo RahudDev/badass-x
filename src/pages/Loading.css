@@ -1,0 +1,32 @@
+/* LoadingPage.css */
+
+.loading-container-google {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.spinner-google {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px; /* Space between spinner and text */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text-google {
+  font-size: 18px;
+  color: #555;
+}

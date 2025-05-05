@@ -1,0 +1,229 @@
+ .container-dashboard{ 
+  margin: 0; /* Remove default margin from row */
+  padding: 0px 0px;
+}
+  
+
+
+.scroll-container {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+/* Scroll button styling */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  z-index: 1;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Left button on the left side */
+.scroll-btn.left {
+  left: 0;
+}
+
+/* Right button on the right side */
+.scroll-btn.right {
+  right: 0;
+}
+
+
+/* Ensure no margin or padding between survey cards */
+.row {
+  margin: 0; /* Remove default margin from row */
+  padding: 0;
+}
+
+.card {
+  margin: 0; /* Remove margin from each card */
+  padding: 0; /* Optional: Remove padding if you want cards to stick closely */
+  border : 5px;
+}
+
+.card-surveys {
+  position: relative;
+  transition: border 0.3s ease-in-out;
+  overflow: hidden; /* Ensures the play button and blur are contained within the card */
+}
+
+/* The overlay that blurs the card content */
+.card-surveys:hover img {
+  filter: blur(5px); /* Apply blur effect */
+  transition: filter 0.3s ease; /* Smooth blur transition */
+}
+
+/* Play button styling */
+.play-overlay {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the play button */
+  opacity: 0;
+  pointer-events: none; /* Disable interaction when not hovering */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.play-btn {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Show the play button and remove blur on hover */
+.card-surveys:hover .play-overlay {
+  opacity: 1;
+  pointer-events: auto; /* Enable interaction when hovered */
+}
+
+/* Optional: Add smooth zoom effect to image on hover */
+.card-surveys:hover img {
+  transform: scale(1.1); /* Zoom effect */
+  transition: transform 0.3s ease;
+}
+
+.card-offers {
+  position: relative;
+  transition: border 0.3s ease-in-out;
+  overflow: hidden; /* Ensures the play button and blur are contained within the card */
+}
+
+/* The overlay that blurs the card content */
+.card-offers:hover img {
+  filter: blur(5px); /* Apply blur effect */
+  transition: filter 0.3s ease; /* Smooth blur transition */
+}
+
+.card-offers:hover .play-overlay {
+  opacity: 1;
+  pointer-events: auto; /* Enable interaction when hovered */
+}
+
+/* Optional: Add smooth zoom effect to image on hover */
+.card-offers:hover img {
+  transform: scale(1.1); /* Zoom effect */
+  transition: transform 0.3s ease;
+}
+
+
+
+.card-body {
+  padding: 0.5rem; /* Adjust padding inside the card body if necessary */
+  margin : 0;
+}
+
+/* Optional: If you want to set specific height for cards for uniformity */
+.card {
+  height: 100%; /* Ensures all cards have the same height */
+}
+
+/* Add this to your CSS file */
+.card-text-black {
+  color: black;
+}
+
+.card-text-i {
+  color : #28a745;
+}
+
+
+
+.modal img {
+  border-radius: 8px;
+}
+
+.title-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Add this CSS in your stylesheet */
+.blur-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(1px);
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1040;
+}
+
+.modal {
+  z-index: 1050;
+}
+
+/* General styles for dashboard on mobile */
+
+@media (max-width: 768px) {
+  .container-dashboard{ 
+  margin: 0; /* Remove default margin from row */
+  padding: 0px 0px;}
+
+  .card-surveys{
+    max-width: 200px;
+    max-height: 200px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    font-size: 10px;
+  }
+  .card-offers {
+    max-width: 200px;
+    max-height: 200px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    font-size: 10px;
+
+  }
+  .button-learn-more{
+    font-size: 10px;
+  }
+
+  .card-offers img {
+    height: 100px;
+  }
+
+  .card-surveys img {
+    height: 70px;
+  }
+  
+  .button-learn-more Button {
+    font-size: 10px;
+  }
+  .page-content-4 p {
+   font-size: 11px; 
+  }
+  .page-content-4 h6{
+    font-size: 11px; 
+   }
+
+  .button-games button {
+    font-size: 12px;
+  }
+  
+}
+

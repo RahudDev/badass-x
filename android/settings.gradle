@@ -1,0 +1,7 @@
+include ':app'
+include ':capacitor-cordova-android-plugins'
+include ':capacitor-google-auth'
+project(':capacitor-cordova-android-plugins').projectDir = new File('./capacitor-cordova-android-plugins/')
+project(':capacitor-google-auth').projectDir = new File(rootProject.projectDir, '../node_modules/@codetrix-studio/capacitor-google-auth/android')
+
+apply from: 'capacitor.settings.gradle'

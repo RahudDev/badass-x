@@ -1,0 +1,25 @@
+{
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "https://od.lk/s/NjFfOTA3Mjc2NzBf/1737635507275-Photoroom%20%281%29.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "https://od.lk/s/NjFfOTA3Mjc2NzBf/1737635507275-Photoroom%20%281%29.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://od.lk/s/NjFfOTA3Mjc2NzBf/1737635507275-Photoroom%20%281%29.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,140 @@
+/* Main container for the chart and other sections */
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+/* Wrapper for the chart itself */
+.chart-wrapper {
+  width: 70%;
+  height: 100%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto; /* Enable horizontal scrolling */
+  margin-top: 20px;
+}
+
+/* Centered and padded dropdown section */
+.select-wrapper {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* The summary section between the dropdown and the chart */
+.summary-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #f1f3f5;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 70%;
+}
+
+/* Each summary item is equally spaced and centered */
+.summary-item {
+  flex: 1;
+  text-align: center;
+}
+
+.summary-item h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #343a40;
+}
+
+.summary-item p {
+  margin-top: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #28a745;
+}
+
+/* Space between summary items */
+.summary-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align to the left */
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 70%;
+}
+
+/* Optional: Additional styling for select dropdown */
+.controls select {
+  width: 200px; /* Adjust width to suit the design */
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Date picker styling, if needed */
+.date-picker {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .summary-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .summary-item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .chart-wrapper {
+    padding: 10px; /* Adjust padding for mobile */
+  }
+
+  .controls {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .controls select {
+    width: 200px;
+  }
+
+  .date-picker {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-wrapper {
+    width: 100%;
+    height: 480px;
+    padding: 0; /* Reduce padding to maximize chart size */
+  }
+
+  .summary-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .select-wrapper {
+    margin-bottom: 10px; /* Adjust margin for mobile */
+  }
+
+  .chart-container {
+    height: 100%;
+    padding: 10px;
+  }
+}

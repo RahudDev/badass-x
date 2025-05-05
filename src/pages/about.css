@@ -1,0 +1,98 @@
+/* src/components/AboutUs.css */
+.about-us-container {
+  padding: 15px 15px;
+  background-color: white;
+}
+
+.about-us-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.about-us-subtitle {
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-us-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.about-us-list {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.about-us-list li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.about-us {
+  box-shadow: none;
+  margin: 0 auto;
+  border-radius: 0px;
+}
+
+
+.about-us.animate-center-out {
+  animation: centerOut 0.7s ease-in-out forwards;
+  opacity: 0; /* Start with invisible state */
+  transform: scale(0.5); /* Start with smaller scale */
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 0px;
+  box-shadow: none;
+}
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .about-us:nth-child(2) {
+    animation-delay: 0.5s; /* Delay for second card */
+  }
+  
+  .about-us:nth-child(3) {
+    animation-delay: 1s; /* Delay for third card */
+  }
+
+  @media (max-width: 768px) {
+    .about-us-container{
+      padding: 0px 5px;
+    }
+    
+    .about-us-container h1{
+      font-size: 1.5rem;
+    }
+
+    .about-us-container h2{
+      font-size: 1rem;
+    }
+    .about-us-container p{
+      font-size: 15px;
+
+    }
+
+    .about-us-container li{
+      font-size: 15px;
+    }
+
+
+  }

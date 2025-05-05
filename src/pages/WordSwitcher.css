@@ -1,0 +1,61 @@
+/* src/components/WordSwitcher.css */
+.word-switcher {
+  display: inline;
+  font-size: 1.3em;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 5px; /* Adjust padding if needed */
+  color : #1d4e83;
+}
+
+
+.blinking-cursor {
+  display: inline-block;
+  animation: blink 0.8s infinite;
+  color : #1d4e83;
+}
+
+/* Blinking Animation */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+
+@media (min-resolution: 127dpi) and (max-resolution: 143dpi),
+(min-resolution: 1.33dppx) and (max-resolution: 1.49dppx) {
+
+  .word-switcher{
+    font-size: 1.3rem;
+  }
+}
+
+/* Zoom Level: 150% - 199% */
+@media (min-resolution: 144dpi) and (max-resolution: 191dpi),
+(min-resolution: 1.5dppx) and (max-resolution: 1.99dppx) {
+
+  .word-switcher{
+    font-size: 1.3rem;
+  }
+}
+
+/* Zoom Level: 200% - 249% */
+@media (min-resolution: 192dpi) and (max-resolution: 239dpi),
+(min-resolution: 2dppx) and (max-resolution: 2.49dppx) {
+  .word-switcher{
+    font-size: 1.3rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .word-switcher {
+    font-size: 20px;
+  }
+}
+
+

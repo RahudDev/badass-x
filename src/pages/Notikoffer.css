@@ -1,0 +1,36 @@
+.offer-card-notik {
+    padding: 10px;
+    width: 200px;
+    margin: 0 10px;
+    display: flex;
+    height: 100%; 
+  }
+
+
+  .notik-offer { 
+    width: 100%;
+  }
+.card-img-top-notik {
+  height: 150px;
+}
+
+
+  
+
+
+  @media (max-width: 768px) {
+
+    .notik-offer {
+    width: 100px;
+    padding: 0px; /* Add some inner spacing */
+    margin: 0 0px; /* Small horizontal margin for spacing */
+    height: auto; /* Let the height adjust dynamically */
+    }
+    .card-img-top-notik {
+      height: 100px; /* Let the height adjust dynamically */
+    }
+  }
+
+
+
+  

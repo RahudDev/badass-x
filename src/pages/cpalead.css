@@ -1,0 +1,120 @@
+.offer-card-cpalead {
+    padding: 0px;
+    width: 200px;
+    margin: 0 0px;
+    display: flex;
+    height: 100%; 
+    transition: border 0.3s ease-in-out;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-top: 30px;
+  }
+
+  .title-modal-cpalead{
+    font-size: 1.5rem;
+  }
+
+  .offer-card-cpalead img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+
+  .play-overlay {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the play button */
+    opacity: 0;
+    pointer-events: none; /* Disable interaction when not hovering */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .play-btn {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  /* The overlay that blurs the card content */
+  .offer-card-cpalead:hover img {
+    filter: blur(5px); /* Apply blur effect */
+    transition: filter 0.3s ease; /* Smooth blur transition */
+  }
+  
+  .offer-card-cpalead:hover .play-overlay {
+    opacity: 1;
+    pointer-events: auto; /* Enable interaction when hovered */
+  }
+  
+  /* Optional: Add smooth zoom effect to image on hover */
+  .offer-card-cpalead:hover img {
+    transform: scale(1.1); /* Zoom effect */
+    transition: transform 0.3s ease;
+  }
+  
+ 
+  
+  
+  .title-ellipsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  @media (max-width: 768px) {
+    .offer-card-cpalead{ 
+      max-width: 130px;
+      max-height: 200px;  
+      margin: 0px 0px;
+      padding: 0px 0px;
+      font-size: 10px;
+      display: flex;
+
+    }
+
+  
+    .offer-card-cpalead img {
+      width: 130px;
+      height: 130px;
+      border-radius: 0px;
+    }
+
+    .offer-card-cpalead .text-center {
+      font-size: 0.7rem;
+
+
+    }
+
+
+  
+    .title-ellipsis {
+      font-size: 12px; /* Adjust font size for smaller screens */
+      margin: 0; /* Remove extra margin */
+    }
+    .d-flex-cpalead {
+      justify-content: start !important; /* Align cards to the left */
+    }
+
+     .modal-cpalead {
+      font-size: 0.8rem;
+    }
+    .title-modal-cpalead{
+      font-size: 1.2rem;
+    }
+
+    .span-device {
+      font-size: 0.6rem;
+    }
+
+  }
+  
