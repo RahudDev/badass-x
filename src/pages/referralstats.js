@@ -130,7 +130,7 @@ const ReferralStats = () => {
               <tr key={index}>
                 <td>{referral.nameUser}</td>
                 <td>{referral.status}</td>
-                <td>{referral.totalLifetimeCommission.toLocaleString()}</td>
+                <td style={{ color: '#28a745' }}><strong> {referral.totalLifetimeCommission.toLocaleString()}</strong></td>
                 <td>{referral.totalCommissionLast30Days.toLocaleString()}</td>
                 <td>{referral.dateReferralDateJoin}</td>
               </tr>

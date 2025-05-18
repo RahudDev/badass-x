@@ -4,6 +4,7 @@ import { API_URL } from '../App';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cookies from 'js-cookie';
+import './referrallink.css';
 
 
 function ReferralLink() {
@@ -81,7 +82,7 @@ function ReferralLink() {
             <Row>
                 <Col>
                     <Card>
-                        <Card.Body>
+                        <Card.Body className='referral-link'>
                             <Card.Title>Your Referral Program</Card.Title>
                             <Card.Text>
                                 <p>Welcome to our referral program! As a valued member, you have the opportunity to earn lifetime commissions by referring new users to our platform.</p>
@@ -102,7 +103,6 @@ function ReferralLink() {
                                 <div style={{
                                   display: 'inline-block',
                                   padding: '10px',
-                                  backgroundColor: '#f8f9fa',
                                   border: '1px solid black',
                                   borderRadius: '5px',
                                   boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',

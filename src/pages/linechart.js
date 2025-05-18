@@ -261,15 +261,15 @@ const LineChart = () => {
       <div className="summary-container">
         <div className="summary-item">
           <h4>Total Earnings</h4>
-          <p>{summaryData.totalEarnings.toLocaleString()} $CUAN</p>
+          <p style={{ color: '#28a745' }}>{summaryData.totalEarnings.toLocaleString()} $CUAN</p>
         </div>
         <div className="summary-item">
           <h4>Total Completed</h4>
-          <p>{summaryData.totalCompleted}</p>
+          <p style={{ color: '#28a745' }}>{summaryData.totalCompleted}</p>
         </div>
         <div className="summary-item">
           <h4>Earnings ({dateRangeLabel})</h4> {/* Dynamically update based on date range */}
-          <p>{summaryData.earningsInRange.toLocaleString()} $CUAN</p>
+          <p style={{ color: '#28a745' }}>{summaryData.earningsInRange.toLocaleString()} $CUAN</p>
         </div>
       </div>
 

@@ -11,6 +11,10 @@ body.dark-mode .redeem-page {
   transition: background 5s ease, color 5s ease;
 }
 
+body.dark-mode .payment-method-card {
+  background-color: #555;
+}
+
 @keyframes gradientShiftDark {
   0% {
     background-position: 0% 50%;

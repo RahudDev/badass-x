@@ -2,18 +2,17 @@
   margin-top: 50px;
 }
 
-body.dark-mode .history-body {
-  background-color: #555;
-  color: white;
-}
 
-body.dark-mode .history-body {
+
+
+
+body.dark-mode .history-body td {
   background: linear-gradient(135deg, #121212, #03123a);
   background-size: 400% 400%;
   animation: gradientShiftDark 5s ease infinite;
   transition: background 5s ease, color 5s ease;
+  color: white;
 }
-
 
 
 @keyframes gradientShiftDark {
@@ -56,7 +55,6 @@ body.dark-mode .history-body {
   h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    color: #333;
   }
   
   @media (max-width: 768px) {
