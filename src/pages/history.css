@@ -2,6 +2,34 @@
   margin-top: 50px;
 }
 
+body.dark-mode .history-body {
+  background-color: #555;
+  color: white;
+}
+
+body.dark-mode .history-body {
+  background: linear-gradient(135deg, #121212, #03123a);
+  background-size: 400% 400%;
+  animation: gradientShiftDark 5s ease infinite;
+  transition: background 5s ease, color 5s ease;
+}
+
+
+
+@keyframes gradientShiftDark {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
 .table {
     font-size: 16px;
   }

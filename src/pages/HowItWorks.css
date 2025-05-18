@@ -6,14 +6,30 @@
   width: 100%;
   max-width: 100%;
   padding: 0;
-  background-color: white;
   border-radius: 15px;
 
 }
 
+
+
+
+body.dark-mode .card-title {
+  color: white;
+}
+
+
+
 .how-it-works.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+body.dark-mode h2, h5 {
+  color : white;
+}
+
+body.dark-mode p {
+  color: white;
 }
 
 .container-how {

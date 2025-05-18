@@ -11,6 +11,23 @@
   }
 
   
+
+
+
+
+@keyframes gradientShiftDark {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+  
   .faq-section.visible {
     opacity: 1;
     transform: translateY(0);
@@ -22,14 +39,13 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
-  .accordion .card-header {
-    background-color: #f8f9fa;
+  .accordion .card-header-faq {
     cursor: pointer;
     padding: 15px;
     position: relative;
   }
   
-  .accordion .card-header h5 {
+  .accordion .card-header-faq h5 {
     font-size: 1.25rem;
     margin: 0;
   }
@@ -38,14 +54,13 @@
     position: absolute;
     right: 20px;
     font-size: 1.5rem;
-    color: #007bff;
+    color: white;
   }
   
   .accordion .card-body {
     padding: 15px;
-    background-color: #fff;
     font-size: 1rem;
-    color: #333;
+    color: white;
   }
   
   @media (max-width: 767px) {
@@ -53,7 +68,7 @@
       padding: 0 15px;
     }
   
-    .accordion .card-header h5 {
+    .accordion .card-header-faq h5 {
       font-size: 1rem;
     }
   

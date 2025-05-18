@@ -145,7 +145,7 @@ const HistoryPage = () => {
             ))
             ) : (
              <tr>
-             <td colSpan="5" className="text-center">No transactions found.</td>
+             <td colSpan="5" className="text-center history-body">No transactions found.</td>
                </tr>
            )}
          </tbody>

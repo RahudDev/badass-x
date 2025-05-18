@@ -76,7 +76,7 @@ const Login = ({ handleLogin}) => {
 
   return (
     <div className="container d-flex align-items-center justify-content-center login min-vh-100">
-      <div className="col-md-6">
+      <div className="col-md-6 login-page">
         <h1 className="mb-4 text-center">{t('login_page.title')}</h1>
         {alertMessage && (
         <div className="alert alert-warning" role="alert">
@@ -116,7 +116,7 @@ const Login = ({ handleLogin}) => {
           <button type="submit" className="btn btn-primary w-100">{t('login_page.login_button')}</button>
         </form>
         {error && <div className="alert alert-danger mt-4">{error}</div>}
-        <div className="mt-4 text-center">
+        <div className="mt-4 more-login text-center">
           <p className="text-muted">
             {t('login_page.no_account_text')} <Link to="/signup">{t('login_page.signup_link')}</Link>
           </p>

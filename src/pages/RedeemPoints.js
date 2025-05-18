@@ -181,7 +181,7 @@ const validateLitecoinAddress = (address) => {
     <Container className="mt-5">
       <Row>
         <Col>
-          <Card>
+          <Card className='redeem-page'>
             <Card.Body>
               <Card.Title><strong>Redeem <span style={{ color: '#28a745' }}>$CUAN</span></strong></Card.Title>
               <Card.Text>

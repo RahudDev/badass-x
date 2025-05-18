@@ -308,7 +308,7 @@ const isMobile = /android|iphone|ipad|ipod|mobile|tablet/i.test(navigator.userAg
       </Modal.Title>
     </Modal.Header>
     <Modal.Body>
-  <div style={{ backgroundColor: '#f8f9fa', padding: '20px', borderRadius: '10px' }}>
+  <div style={{ padding: '20px', borderRadius: '10px' }}>
     {/* Image, Device Icons, and Total Points */}
     <div style={{ display: 'flex', alignItems: 'center' }}>
       <img

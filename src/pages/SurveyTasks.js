@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'animate.css';
+import './Notikoffer.css';
 
 const SurveyTasks = () => {
   return (
@@ -16,7 +17,7 @@ const SurveyTasks = () => {
           </div>*/}
         </div>
         <div className="col-md-4 animate__animated animate__fadeInLeft">
-          <div className="card"  style={{ border: '2px solid #ddd', borderRadius: '15px'  }}>
+          <div className="card modal-inside-body"  style={{ border: '2px solid #ddd', borderRadius: '15px'  }}>
             <div className="card-body">
               <h5 className="card-title">Cpx Research</h5>
               <p className="card-text">Complete surveys from Cpx Research and earn  <strong style={{ color: '#28a745' }}>$CUAN</strong>.</p>

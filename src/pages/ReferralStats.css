@@ -1,6 +1,5 @@
 .referral-stats-container {
     padding: 20px;
-    background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 50px;
@@ -46,7 +45,6 @@
     text-align: center;
     font-style: italic;
     color: #555;
-    background-color: #f9f9f9;
     padding: 15px;
     border: 1px solid #ddd;
   }
@@ -55,12 +53,32 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
-    background-color: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
+
+  body.dark-mode .summary-dashboard {
+  background: linear-gradient(135deg, #121212, #03123a);
+  background-size: 400% 400%;
+  animation: gradientShiftDark 5s ease infinite;
+  transition: background 5s ease, color 5s ease;
+}
+
+body.dark-mode .no-referrals-message {
+  background: linear-gradient(135deg, #121212, #03123a);
+  background-size: 400% 400%;
+  animation: gradientShiftDark 5s ease infinite;
+  transition: background 5s ease, color 5s ease;
+}
   
+
+body.dark-mode .referral-table tr:nth-child(even) {
+  background: linear-gradient(135deg, #121212, #03123a);
+  background-size: 400% 400%;
+  animation: gradientShiftDark 5s ease infinite;
+  transition: background 5s ease, color 5s ease;
+}
   .summary-item {
     text-align: center;
   }

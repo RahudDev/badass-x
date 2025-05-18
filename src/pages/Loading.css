@@ -6,9 +6,41 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: white;
   text-align: center;
   font-family: Arial, sans-serif;
+}
+
+body.dark-mode .loading-container-google {
+  background: radial-gradient(circle at center, rgba(3, 18, 58, 0.7) 0%, #121212 40%, #121212 100%);
+  background-size: 400% 400%;
+  animation: lampSpread 1.2s ease-out forwards, gradientShiftDark 8s ease-in-out infinite;
+  color: #ffffff;
+}
+
+/* Radial Lamp Spread Animation */
+@keyframes lampSpread {
+  0% {
+    background: radial-gradient(circle at center, rgba(3, 18, 58, 0.9) 0%, #121212 0%, #121212 100%);
+  }
+  50% {
+    background: radial-gradient(circle at center, rgba(3, 18, 58, 0.7) 20%, #121212 60%, #121212 100%);
+  }
+  100% {
+    background: radial-gradient(circle at center, rgba(3, 18, 58, 0.7) 0%, #121212 40%, #121212 100%);
+  }
+}
+
+/* Continuous Gradient Shift for subtle movement */
+@keyframes gradientShiftDark {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .spinner-google {

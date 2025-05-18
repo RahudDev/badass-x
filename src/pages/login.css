@@ -16,10 +16,19 @@
   opacity: 0; /* Start with invisible state */
   transform: scale(0.5); /* Start with smaller scale */
   margin: 0 auto;
-  background-color: #fff;
   border-radius: 0px;
   box-shadow: none;
 }
+
+body.dark-mode h1 {
+  color: white;
+}
+
+body.dark-mode  {
+  color : white;
+}
+
+
 
 .password-toggle2 {
   position: absolute;

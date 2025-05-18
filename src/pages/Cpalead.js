@@ -6,6 +6,8 @@ import axios from 'axios';
 import { FaPlay } from 'react-icons/fa'; // Make sure to install react-icons
 import { API_URL } from '../App';
 import './cpalead.css';
+import './Notikoffer.css';
+
 
 const OffersPage = () => {
   const [offers, setOffers] = useState([]);
@@ -64,7 +66,7 @@ const OffersPage = () => {
 
   if (loading) {
     return (
-      <div className='loading-container-google align-items-center justify-content-center min-vh-100'>
+      <div className='loading-container-google bg-secondary align-items-center justify-content-center min-vh-100'>
       <div className="spinner-google"></div>
       <div className="loading-text-google">Fetching offers...</div>
     </div>
@@ -112,12 +114,12 @@ const OffersPage = () => {
 
       {selectedOffer && (
         <Modal className='modal-cpalead' show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
+          <Modal.Header className='modal-inside-body' closeButton>
           <i className="bi bi-gift" style={{ marginRight: '10px'}}></i>
             <Modal.Title className='title-modal-cpalead'><strong>{selectedOffer.title}</strong></Modal.Title>
           </Modal.Header>
-          <Modal.Body>
-          <div style={{ display: 'flex', alignItems: 'center' }}>
+          <Modal.Body className='modal-inside-body'>
+          <div  style={{ display: 'flex', alignItems: 'center' }}>
       <img
         src={selectedOffer.creatives.url}
         alt={selectedOffer.title}
@@ -130,7 +132,7 @@ const OffersPage = () => {
             <span className='span-device' style={{ marginLeft: '10px'}}>Available on this device</span>
     
              </div>
-              <div className='cuan-amount'style={{ backgroundColor: '#e9ecef', color: '#28a745', padding: '8px 12px', borderRadius: '8px' }}>
+              <div className='cuan-amount total-payout-notik'style={{ color: '#28a745', padding: '8px 12px', borderRadius: '8px' }}>
                 <strong> +{(selectedOffer.amount * 100 * 0.7).toFixed(0)} $CUAN </strong>
               </div>
           </div> 
@@ -140,7 +142,7 @@ const OffersPage = () => {
             <p><strong>Steps:</strong> {selectedOffer.conversion}</p>
             <p><strong>Device:</strong> {selectedOffer.device}</p>
           </Modal.Body>
-          <Modal.Footer className="d-flex justify-content-center">
+          <Modal.Footer className="d-flex justify-content-center modal-inside-body">
             <Button
               variant="primary"
               className="w-100 d-flex align-items-center justify-content-center"

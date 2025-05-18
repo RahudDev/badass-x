@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import {  HashRouter as Router, Route, Routes, Navigate,  BrowserRouter} from 'react-router-dom';
+import {  BrowserRouter as Router, Route, Routes, Navigate,  BrowserRouter} from 'react-router-dom';
 import axios from 'axios';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -57,12 +57,14 @@ import { useTranslation } from 'react-i18next';
 import Cookies from 'js-cookie';
 import CryptoJS from 'crypto-js'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { API_URL_MAIN, web_client, bajuhitam } from './config';
+import { API_URL_MAIN, web_client, bajuhitam, DOMAIN } from './config';
 import GameSpinner from './pages/GameSpinner';
 import DeviceInfo from './pages/capacitorcheck';
 
 
 const API = API_URL_MAIN.split(',');
+const domain = DOMAIN.split(',');
+const main = domain[0];
 export const API_URL = API[2];
 export { HandlePageClick };
 export const key = bajuhitam;
@@ -91,7 +93,7 @@ const App = () => {
   const [error, setError] = useState('');
   const web = web_client.split(',');
   const { t } = useTranslation();
-  const g_redirect = web[0];
+  const g_redirect = web[1];
 
   
   useEffect(() => {
@@ -371,7 +373,7 @@ const App = () => {
           }
   
           // Redirect to email verification page
-          window.location.href = `${g_redirect}/#/verify-email`;
+          window.location.href = `${g_redirect}/verify-email`;
           localStorage.removeItem('referralCode');
     
         } else {
@@ -391,7 +393,7 @@ const App = () => {
         localStorage.setItem('points', points);
         Cookies.set('userip', encryptedIp, { expires: 1 }); // Expires in 1 day
         const encryptedhub = encryptData(uuid, key); 
-        Cookies.set('uuid', encryptedhub, { expires: 7, sameSite: 'None', secure: true, domain: '.freecuan.site' });
+        Cookies.set('uuid', encryptedhub, { expires: 7, sameSite: 'None', secure: true, domain: `${main}` });
   
         setAuthenticated(true);
         setIsVerified(true);
@@ -401,9 +403,9 @@ const App = () => {
   
         // Redirect based on verification status
         if (isVerified) {
-          window.location.href = `${g_redirect}/#/dashboard`;
+          window.location.href = `${g_redirect}/dashboard`;
         } else {
-          window.location.href = `${g_redirect}/#/verify-email`;
+          window.location.href = `${g_redirect}/verify-email`;
         }
       } else {
         console.error('Unexpected response status:', status);
@@ -418,7 +420,7 @@ const App = () => {
   
         if (errorMessage === 'User exists but signed up with a different method. Please use the correct sign-in method.') {
           localStorage.setItem('alertMessage', t('login_page.email_registered_error'));
-          window.location.href = `${g_redirect}/#/login`;
+          window.location.href = `${g_redirect}/login`;
         }
       } else {
         setError('Error during Google sign-in');
@@ -464,7 +466,7 @@ const App = () => {
           localStorage.setItem('points', loginResponse.data.points);
           Cookies.set('userip', encryptedIp, { expires: 1 }); // Expires in 1 day
           const encryptedhub = encryptData(loginResponse.data.uuid, key); 
-          Cookies.set('uuid', encryptedhub, { expires: 7, sameSite: 'None', secure: true, domain: '.freecuan.site' });
+          Cookies.set('uuid', encryptedhub, { expires: 7, sameSite: 'None', secure: true, domain: `${main}` });
           setAuthenticated(true);
           setIsVerified(loginResponse.data.isVerified);
 
@@ -509,7 +511,7 @@ const App = () => {
         localStorage.setItem('points', response.data.points);
         Cookies.set('userip', encryptedIp, { expires: 1 }); // Expires in 1 day
         const encryptedhub = encryptData(response.data.uuid, key); 
-        Cookies.set('uuid', encryptedhub, { expires: 7, sameSite: 'None', secure: true, domain: '.freecuan.site' });
+        Cookies.set('uuid', encryptedhub, { expires: 7, sameSite: 'None', secure: true, domain: `${main}`});
         setAuthenticated(true);
         setIsVerified(response.data.isVerified);
 
@@ -613,6 +615,7 @@ const App = () => {
             <Route path="/home" element={!isVerified ? <Home /> : <Navigate to="/dashboard"/>} />
             <Route path="/landingpage" element={!isVerified ? <LandingPage/> : <Navigate to="/dashboard"/>}/>
             <Route path="/about" element={<About />} />
+            <Route path="/loading" element={<LoadingPage />} />
             <Route path="/tasks/:id" element={<TaskDetail />} />
             <Route path="/tasks" element={<Tasks />} />
             <Route path="/survey-tasks" element={isVerified ? <SurveyTasks /> : <Navigate to="/login" />} />

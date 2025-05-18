@@ -245,14 +245,14 @@ const Notikoffer = () => {
     size="lg" // Makes the modal wider
     className="modal"
   >
-    <Modal.Header closeButton>
+    <Modal.Header className='modal-header-notik' closeButton>
       <Modal.Title>
         <i className="bi bi-gift" style={{ marginRight: '10px' }}></i>
         <strong>{selectedOffer.name}</strong>
       </Modal.Title>
     </Modal.Header>
-    <Modal.Body>
-      <div style={{ backgroundColor: '#f8f9fa', padding: '20px', borderRadius: '10px' }}>
+    <Modal.Body className='modal-body-notik'>
+      <div className='modal-inside-body' style={{  padding: '20px', borderRadius: '10px' }}>
         {/* Image Section */}
         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
           <img
@@ -264,7 +264,7 @@ const Notikoffer = () => {
           <div>
             <strong>Categories:</strong> {selectedOffer.categories.join(", ")}
               {/* Payout */}
-              <div style={{ backgroundColor: '#e9ecef', color: '#28a745', padding: '8px 12px', borderRadius: '8px', fontSize: '18px' }}>
+              <div className="total-payout-notik" style={{ color: '#28a745', padding: '8px 12px', borderRadius: '8px', fontSize: '18px' }}>
               <strong> +{selectedOffer.payout} $CUAN </strong>
                </div>
           </div>
@@ -294,9 +294,10 @@ const Notikoffer = () => {
               {selectedOffer.events.map((event, index) => (
                 <li
                   key={index}
+                  className="list-offer-notik"
                   style={{
                     marginBottom: '10px',
-                    backgroundColor: '#e9ecef',
+            
                     padding: '10px',
                     borderRadius: '8px',
                     display: 'flex',
@@ -321,7 +322,7 @@ const Notikoffer = () => {
       </div>
     </Modal.Body>
 
-    <Modal.Footer style={{ justifyContent: 'center', padding: '20px' }}>
+    <Modal.Footer className='modal-footer-notik' style={{ justifyContent: 'center', padding: '20px' }}>
       <a
         href={selectedOffer.click_url}
         className="btn btn-success btn-block"

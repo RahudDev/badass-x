@@ -9,6 +9,34 @@
 }
 
 
+body.dark-mode .user-reviews-slider {
+  background: linear-gradient(135deg, #121212, #03123a);
+  background-size: 400% 400%;
+  animation: gradientShiftDark 5s ease infinite;
+  transition: background 5s ease, color 5s ease;
+}
+
+
+body.light-mode .user-reviews {
+  color: white;
+}
+
+body.dark-mode .user-review-content{
+  color: black;
+}
+
+@keyframes gradientShiftDark {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 .user-reviews-slider .container-review {
   max-width: 100%;
@@ -57,7 +85,6 @@
 }
 
 .user-review-card {
-  background-color: #f8f9fa;
   border-radius: 10px;
 }
 

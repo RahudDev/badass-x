@@ -4,6 +4,7 @@ import { faClock, faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Browser } from '@capacitor/browser';
 import './Dashboard.css';
+import './surveycard.css';
 
 
 const StarRating = ({ rating, ratingCount }) => (
@@ -59,7 +60,7 @@ const SurveyCard = ({ survey }) => {
                     {survey.loi} min
                 </p>
                 <p className="card-text-i card-text-black">
-                    <strong>+{Math.round(survey.points)} $CUAN </strong>
+                    <strong style={{ color: '#28a745' }}>+{Math.round(survey.points)} $CUAN </strong>
                 </p>
             </div>
     
@@ -142,7 +143,7 @@ export const SurveyRow = ({ title, surveys }) => {
                     )}
                 </div>
             ) : (
-                <div className="text-muted d-flex justify-content-center align-items-center" style={{ height: '150px', width: '100%' }}>
+                <div className=" surveys-unactive d-flex justify-content-center align-items-center" style={{ height: '150px', width: '100%' }}>
                     Sorry, you have no survey or research matches right now. Please check again later.
                 </div>
             )}

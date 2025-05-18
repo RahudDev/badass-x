@@ -12,6 +12,10 @@
   border-radius: 15px;
 }
 
+body.dark-mode .offer-card-surveys {
+  background-color: #555;
+}
+
 /* Play Button Overlay */
 .play-overlay {
   position: absolute;

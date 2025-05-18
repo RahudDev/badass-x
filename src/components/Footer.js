@@ -17,7 +17,7 @@ import it_flag from './assets/italian_flag.jpg';
 import ar_flag from './assets/arabic_flag.jpg';
 import hi_flag from './assets/hindi_flag.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faFacebook, faTwitter, faGooglePlay  } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faFacebook, faTwitter, faGooglePlay, faLinkedin  } from '@fortawesome/free-brands-svg-icons';
 
 
 
@@ -92,29 +92,35 @@ const Footer = () => {
       <div className="footer-section">
         <h4><strong>{t('support')}</strong></h4>
         <ul>
-        <li><a href="#/about" onClick={(e) => HandlePageClick(e, '/about', contactSectionRef, navigate)}>{t('about_us')}</a></li>
-          <li><a href="#/faq" onClick={(e) => HandlePageClick(e, '/faq',contactSectionRef, navigate)}>{t('faq')}</a></li>
-          <li><a href="#/contact-us" onClick={(e) => HandlePageClick(e, '/contact-us', contactSectionRef, navigate)}>{t('contactUs')}</a></li>
+        <li><a href="/about" onClick={(e) => HandlePageClick(e, '/about', contactSectionRef, navigate)}>{t('about_us')}</a></li>
+          <li><a href="/faq" onClick={(e) => HandlePageClick(e, '/faq',contactSectionRef, navigate)}>{t('faq')}</a></li>
+          <li><a href="/contact-us" onClick={(e) => HandlePageClick(e, '/contact-us', contactSectionRef, navigate)}>{t('contactUs')}</a></li>
         </ul>
       </div>
       <div className="footer-section">
         <h4><strong>{t('followUs')}</strong></h4>
         <ul className="app-links">
           <li>
-          <a href="https://x.com/freecuansite" className='app-link'>
+          <a href="https://x.com/optimisticash_" className='app-link'>
           <FontAwesomeIcon icon={faTwitter} className='icon_media' />
           <span></span>
           </a>
           </li>
           <li>
-          <a href="https://www.facebook.com/freecuansite" className='app-link'>
+          <a href="https://www.facebook.com/optimisticashcom" className='app-link'>
           <FontAwesomeIcon icon={faFacebook} className='icon_media'/>
           <span></span>
           </a>
           </li>
           <li>
-          <a href="https://www.instagram.com/freecuansite" className='app-link'>
+          <a href="https://www.instagram.com/optimisticash_com" className='app-link'>
           <FontAwesomeIcon icon={faInstagram} className='icon_media' />
+          <span></span>
+          </a>
+          </li>
+           <li>
+          <a href="https://www.linkedin.com/in/optimisticash" className='app-link'>
+          <FontAwesomeIcon icon={faLinkedin} className='icon_media' />
           <span></span>
           </a>
           </li>
@@ -141,7 +147,7 @@ const Footer = () => {
 
 
     <div className="footer-bottom">
-      <p><a href="#/terms-of-service" onClick={(e) => HandlePageClick(e, '/terms-of-service',contactSectionRef, navigate)}>{t('termsOfService')}</a> | <a href="#/privacy-policy" onClick={(e) => HandlePageClick(e, '/privacy-policy',contactSectionRef, navigate)}>{t('privacyPolicy')}</a></p>
+      <p><a href="/terms-of-service" onClick={(e) => HandlePageClick(e, '/terms-of-service',contactSectionRef, navigate)}>{t('termsOfService')}</a> | <a href="/privacy-policy" onClick={(e) => HandlePageClick(e, '/privacy-policy',contactSectionRef, navigate)}>{t('privacyPolicy')}</a></p>
       <p>&copy;{t('copyright')}</p>
     </div>
   </footer>

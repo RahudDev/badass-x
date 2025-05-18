@@ -3,6 +3,28 @@
   margin-bottom: 20px;
 }
 
+body.dark-mode .redeem-page {
+  background: linear-gradient(135deg, #121212, #03123a);
+  background-size: 400% 400%;
+  animation: gradientShiftDark 5s ease infinite;
+  color: #fff;
+  transition: background 5s ease, color 5s ease;
+}
+
+@keyframes gradientShiftDark {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
 .payment-method-image {
   height: 100px;
   object-fit: contain;

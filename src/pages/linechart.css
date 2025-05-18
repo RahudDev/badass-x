@@ -6,8 +6,9 @@
   align-items: center;
   padding: 20px;
   height: 100vh;
-  background-color: #f9f9f9;
 }
+
+
 
 /* Wrapper for the chart itself */
 .chart-wrapper {
@@ -20,6 +21,40 @@
   overflow-x: auto; /* Enable horizontal scrolling */
   margin-top: 20px;
 }
+
+
+body.dark-mode .chart-wrapper {
+  background: linear-gradient(135deg, #121212, #03123a);
+  background-size: 400% 400%;
+  animation: gradientShiftDark 5s ease infinite;
+  transition: background 5s ease, color 5s ease;
+}
+
+body.dark-mode .summary-container {
+  background: linear-gradient(135deg, #121212, #03123a);
+  background-size: 400% 400%;
+  animation: gradientShiftDark 5s ease infinite;
+  transition: background 5s ease, color 5s ease;
+}
+
+
+
+
+
+
+
+@keyframes gradientShiftDark {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 /* Centered and padded dropdown section */
 .select-wrapper {

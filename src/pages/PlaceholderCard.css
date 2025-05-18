@@ -9,6 +9,15 @@
     border-radius: 5px;
 }
 
+body.dark-mode .placeholder-card {
+    background-color: #555;
+}
+
+
+body.dark-mode .placeholder-image {
+    background-color: #555;
+}
+
 .placeholder-image {
     background-color: #f0f0f0; /* Light grey for image placeholder */
     height: 200px; /* Fixed height for image area */

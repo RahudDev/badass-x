@@ -63,8 +63,8 @@ const FAQ = () => {
         <h2 className="text-center mb-4">{t('faq_heading')}</h2>
         <div className="accordion" id="faqAccordion">
           {faqData.map((item, index) => (
-            <div key={index} className="card">
-              <div className="card-header" onClick={() => toggleAnswer(index)}>
+            <div key={index} className="card bg-secondary">
+              <div className="card-header-faq" onClick={() => toggleAnswer(index)}>
                 <h5 className="mb-0">
                   {item.question}
                   <span className="faq-icon">{activeIndex === index ? '-' : '+'}</span>

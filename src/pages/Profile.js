@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import DeleteAccount from './Deleteaccount';
+import "./profile.css";
 
 
 
@@ -22,7 +23,7 @@ const Profile = ({userEmail, ToggleButton, liveUpdatesActive , handleToggle}) =>
         <label htmlFor="profileName" className="form-label">Name</label>
         <input
           type="text"
-          className="form-control"
+          className="form-control profile-data"
           id="profileName"
           value={userProfile.name}
           readOnly
@@ -32,7 +33,7 @@ const Profile = ({userEmail, ToggleButton, liveUpdatesActive , handleToggle}) =>
         <label htmlFor="profileEmail" className="form-label">Email</label>
         <input
           type="email"
-          className="form-control"
+          className="form-control profile-data"
           id="profileEmail"
           value={userProfile.email}
           readOnly

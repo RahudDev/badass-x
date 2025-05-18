@@ -5,6 +5,26 @@
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   }
+
+  body.dark-mode .leaderboard-container {
+  background: linear-gradient(135deg, #121212, #03123a);
+  background-size: 400% 400%;
+  animation: gradientShiftDark 5s ease infinite;
+  transition: background 5s ease, color 5s ease;
+}
+
+@keyframes gradientShiftDark {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
   
   /* Champion Ladder Styles */
   .champion-ladder .card {

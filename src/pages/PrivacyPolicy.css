@@ -1,7 +1,14 @@
 .container-privacy {
   padding: 15px 15px;
-  background-color: white;
 }
+
+
+
+
+body.dark-mode .privacy-us-list li {
+  color: white;
+}
+
 
 .privacy-us-title {
   font-size: 2.5rem;
@@ -59,7 +66,6 @@
   opacity: 0; /* Start with invisible state */
   transform: scale(0.5); /* Start with smaller scale */
   margin: 0 auto;
-  background-color: white;
   border-radius: 0px;
   box-shadow: none;
 }

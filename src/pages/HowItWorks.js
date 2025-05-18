@@ -1,13 +1,21 @@
 // src/components/HowItWorks.js
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './HowItWorks.css';
 import { HandlePageClick } from '../App';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import person from "./assets/person_single_icon.png";
-import dollarcoin from "./assets/dollarblack.png";
-import rewardhand from "./assets/rewardhand.png";
+
+import person_light from "./assets/person_single_icon.png";
+import person_dark from "./assets/person_single_icon_dark.png";
+
+import dollarcoin_light from "./assets/dollarblack.png";
+import dollarcoin_dark from "./assets/dollarblack_dark.png";
+
+import rewardhand_light from "./assets/rewardhand.png";
+import rewardhand_dark from "./assets/rewardhand_dark.png";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const HowItWorks = () => {
   const howItWorksRef = useRef(null);
@@ -26,6 +34,21 @@ const HowItWorks = () => {
       </>
     );
   };
+
+const [isDarkMode, setIsDarkMode] = useState(false);
+
+useEffect(() => {
+  const checkDarkMode = () => {
+    setIsDarkMode(document.body.classList.contains('dark-mode'));
+  };
+
+  checkDarkMode(); // initial check
+  const observer = new MutationObserver(checkDarkMode);
+  observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+  return () => observer.disconnect();
+}, []);
+
 
 
   useEffect(() => {
@@ -49,7 +72,7 @@ const HowItWorks = () => {
         <div className="row align-items-center">
           <div className="col-md-4 mb-3 position-relative">
             <div className="card-2 h-100">
-              <img src={person} className="card2-img-top" alt="Community" />
+              <img src={isDarkMode ? person_dark : person_light} className="card2-img-top" alt="Community" />
               <div className="card-body">
                 <h5 className="card-title"><strong>{t('signUpTitle')}</strong></h5>
                 <p className="card2-text">{t('signUpText')}</p>
@@ -59,7 +82,7 @@ const HowItWorks = () => {
           </div>
           <div className="col-md-4 mb-3 position-relative">
             <div className="card-2 h-100">
-              <img src={dollarcoin} className="card2-img-top" alt="Complete Tasks" />
+              <img src={isDarkMode ? dollarcoin_dark : dollarcoin_light} className="card2-img-top" alt="Complete Tasks" />
               <div className="card-body">
                 <h5 className="card-title"><strong>{Cuangreen(t("earnCuanTitle"))}</strong></h5>
                 <p className="card2-text">{Cuangreen(t('earnCuanText'))}</p>
@@ -69,7 +92,7 @@ const HowItWorks = () => {
           </div>
           <div className="col-md-4 mb-3">
             <div className="card-2 h-100">
-              <img src={rewardhand} className="card2-img-top" alt="Earn Rewards" />
+              <img src={isDarkMode ? rewardhand_dark : rewardhand_light} className="card2-img-top" alt="Earn Rewards" />
               <div className="card-body">
                 <h5 className="card-title"><strong>{t('cashOutTitle')}</strong></h5>
                 <p className="card2-text">{Cuangreen(t('cashOutText'))}</p>

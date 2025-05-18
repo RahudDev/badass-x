@@ -6,6 +6,61 @@
     height: 100%; 
   }
 
+  body.dark-mode .notik-offer {
+    background-color: #555;
+  }
+
+  .modal-body-notik {
+    background-color: white ;
+  }
+
+  .modal-inside-body {
+    background-color: #f8f9fa ;
+  }
+
+  .modal-footer-notik {
+    background-color: #f8f9fa;
+  }
+
+  body.dark-mode .modal-footer-notik {
+    background-color: #6c757d;
+  }
+
+  body.dark-mode .modal-body-notik {
+    background-color: #6c757d;
+  }
+
+  body.dark-mode .modal-inside-body {
+    background-color: #555;
+  }
+
+  .list-offer-notik {
+    background-color:#e9ecef;
+  }
+
+  .modal-header-notik {
+    color: black;
+  }
+
+  body.dark-mode .modal-header-notik {
+    color : white;
+    background-color:  #6c757d;
+  }
+
+  .total-payout-notik {
+    background-color: #e9ecef ;
+  }
+
+  body.dark-mode .total-payout-notik {
+    background-color: #6c757d;
+  }
+
+  body.dark-mode .list-offer-notik {
+    background-color: #6c757d;
+  }
+
+  
+
 
   .notik-offer { 
     width: 100%;

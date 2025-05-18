@@ -96,7 +96,7 @@ const LiveUpdates = ({ updates, loading }) => {
           onTouchEnd={handleTouchEnd}     // End touch event for mobile
         >
           {updates.map((update, index) => (
-            <div className="update-item" key={index} onClick={() => handleUpdateClick(update)}>
+            <div className="update-item bg-secondary" key={index} onClick={() => handleUpdateClick(update)}>
               <div className="update-left">
                 <div className="icon-square">
                   {renderOfferIcon(update.nameOffer)}
@@ -117,7 +117,7 @@ const LiveUpdates = ({ updates, loading }) => {
 
       {isPopupVisible && selectedUpdate && (
         <div className="popup-overlay">
-          <div className="popup-content">
+          <div className="popup-content bg-secondary">
             <h3>Transaction Details</h3>
             <p><strong>Name:</strong> {selectedUpdate.name}</p>
             <p><strong>Offer:</strong> {selectedUpdate.description}</p>

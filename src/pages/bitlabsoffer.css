@@ -12,6 +12,14 @@
 
   }
 
+  body.dark-mode .offer-card {
+    background-color: #555;
+  }
+
+  body.dark-mode .modal-bitlabs-offer {
+    background-color: #555;
+  }
+
 
   
   .modal img {

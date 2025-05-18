@@ -12,6 +12,28 @@
   gap : 40px;
 }
 
+body.dark-mode .landing-page-welcome {
+  background: linear-gradient(135deg, #121212, #03123a);
+  background-size: 400% 400%;
+  animation: gradientShiftDark 5s ease infinite;
+  color: #fff;
+  transition: background 5s ease, color 5s ease;
+}
+
+
+
+@keyframes gradientShiftDark {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 
 /* Left Section: Text Content */
@@ -280,6 +302,10 @@
   h, h2, h5 {
     color: #333;
   }
+
+  body.dark-mode h, h2, h5 {
+    color: white;
+  }
   
   .nav-link {
     font-weight: bold;
@@ -325,6 +351,10 @@
     overflow-x: hidden;
     overflow-y: hidden;
   }
+
+  
+
+  
   
   .landing-page .container {
     text-align: center;
@@ -339,6 +369,10 @@
     font-size: 1.5rem;
     margin-bottom: 2rem;
     color : black;
+  }
+
+  body.dark-mode .landing-page .lead {
+    color: white;
   }
   
   .landing-page .btn-primary {

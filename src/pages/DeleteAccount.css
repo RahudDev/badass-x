@@ -31,12 +31,16 @@
   
   /* Center the popup */
   .popup-container {
-    background-color: white;
     padding: 20px;
     border-radius: 10px;
     width: 400px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+
+  body.dark-mode .popup-container {
+    background-color: #555;
   }
   
   /* Style for popup buttons */

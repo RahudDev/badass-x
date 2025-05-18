@@ -197,6 +197,7 @@ const ContactForm = () => {
           </Label>
           <Input
             type="textarea"
+            className='description-contact'
             name="description"
             id="description"
             placeholder={t('contact.description_placeholder')}
@@ -212,6 +213,7 @@ const ContactForm = () => {
           </Label>
           <Input
             type="select"
+            className='category-contact'
             name="category"
             id="category"
             value={formData.category}

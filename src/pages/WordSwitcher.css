@@ -8,6 +8,10 @@
   color : #1d4e83;
 }
 
+body.dark-mode .word-switcher {
+  color: aqua;
+}
+
 
 .blinking-cursor {
   display: inline-block;

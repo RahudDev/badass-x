@@ -3,6 +3,19 @@
   padding-top: 35px;
 }
 
+body.dark-mode input {
+  background-color: #555;
+}
+
+body.dark-mode .description-contact {
+  background-color: #555;
+}
+
+body.dark-mode .category-contact {
+  background-color: #555;
+}
+
+
 @keyframes centerOut {
     0% {
       opacity: 0;
@@ -19,7 +32,6 @@
     opacity: 0; /* Start with invisible state */
     transform: scale(0.5); /* Start with smaller scale */
     margin: 0 auto;
-    background-color: #fff;
     border-radius: 0px;
     box-shadow: none;
   }

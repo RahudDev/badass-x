@@ -38,7 +38,7 @@ function CpxResearch() {
           src={surveyURL}
           title="Survey"
           onLoad={handleIframeLoad}
-          style={{ display: isLoading ? 'none' : 'block', border: 'none'}}
+          style={{ display: isLoading ? 'none' : 'block', border: 'none',}}
         ></iframe>
       )}
     </div>

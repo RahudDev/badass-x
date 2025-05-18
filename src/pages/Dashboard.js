@@ -344,7 +344,7 @@ const Dashboard = ({ userPoints }) => {
         <div className="page-content-4 container-dashboard">
             <div className="container mt-4">
                 <div className="card shadow-sm">
-                    <div className="card-body">
+                    <div className="card-body-dashboard">
                         <h1 className="card-title"><strong>Dashboard</strong></h1>
                         <p className="card-text">Here are some surveys and offers you can complete to earn <strong style={{ color: '#28a745' }}>$CUAN</strong>.</p>
 

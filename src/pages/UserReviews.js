@@ -113,12 +113,12 @@ const UserReviews = () => {
     <section className="user-reviews-slider mt-5">
       <div className="container-review">
         <h2 className="user-reviews-heading mb-4 text-center"><strong>{t('user_reviews_heading')}</strong></h2>
-        <p className="user" style={{color:"black"}}>{t('user_reviews_p')}</p> <br/>
+        <p className="user-reviews">{t('user_reviews_p')}</p> <br/>
         <div className="slider-wrapper" ref={sliderRef}>
           <div className="slider-content">
             {reviews.concat(reviews).map((review, index) => (
               <div key={index} className="user-review-slide">
-                <div className="card user-review-card h-100" style={{border: '2px solid #ddd',}}>
+                <div className="card user-review-card bg-secondary h-100" style={{border: '2px solid #ddd',}}>
                   <div className="card-body">
                     <h5 className="user-review-name">{review.name}</h5>
                     <p className="user-review-content">{review.review}</p>

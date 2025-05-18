@@ -28,7 +28,7 @@ const LandingPage = () => {
     {t('subheader')} <br className="word-break-line" /><WordSwitcher />
     </p>
     <Link
-      to="#/home"
+      to="/home"
       className="btn btn-primary btn-lg drop-in delay-1"
       onClick={(e) => HandlePageClick(e, '/home', ref, navigate)}
     >

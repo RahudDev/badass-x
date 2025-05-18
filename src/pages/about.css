@@ -1,8 +1,28 @@
 /* src/components/AboutUs.css */
 .about-us-container {
   padding: 15px 15px;
-  background-color: white;
+  color: black;
 }
+
+
+
+
+
+
+body.dark-mode .about-us-title {
+  color: white;
+  
+}
+
+body.dark-mode .about-us-list li{
+  color: white;
+  
+}
+
+
+
+
+
 
 .about-us-title {
   font-size: 2.5rem;
@@ -28,6 +48,8 @@
 .about-us-list {
   list-style-type: disc;
   margin-left: 20px;
+  color: #555;
+
 }
 
 .about-us-list li {
@@ -49,10 +71,10 @@
   opacity: 0; /* Start with invisible state */
   transform: scale(0.5); /* Start with smaller scale */
   margin: 0 auto;
-  background-color: white;
   border-radius: 0px;
   box-shadow: none;
 }
+
   
   @keyframes slideIn {
     0% {
