@@ -511,7 +511,7 @@ const App = () => {
         localStorage.setItem('points', response.data.points);
         Cookies.set('userip', encryptedIp, { expires: 1 }); // Expires in 1 day
         const encryptedhub = encryptData(response.data.uuid, key); 
-        Cookies.set('uuid', encryptedhub, { expires: 7});
+        Cookies.set('uuid', encryptedhub, { expires: 7, sameSite: 'None', secure: true, domain: `${main}` });
         setAuthenticated(true);
         setIsVerified(response.data.isVerified);
 
