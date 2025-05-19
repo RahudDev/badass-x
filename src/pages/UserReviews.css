@@ -16,6 +16,14 @@ body.dark-mode .user-reviews-slider {
   transition: background 5s ease, color 5s ease;
 }
 
+.container-review h2 {
+  color: black;
+}
+
+.container-review p {
+  color: black;
+}
+
 
 body.light-mode .user-reviews {
   color: white;

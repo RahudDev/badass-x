@@ -10,6 +10,10 @@
 
 }
 
+.container-how h2 {
+  color: black;
+}
+
 
 
 
@@ -24,7 +28,7 @@ body.dark-mode .card-title {
   transform: translateY(0);
 }
 
-body.dark-mode h2, h5 {
+body.dark-mode h2 {
   color : white;
 }
 

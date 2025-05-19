@@ -152,10 +152,10 @@ useEffect(() => {
             </>
           )}
           {!isLoggedIn && (
-            <li><Link onClick={(e) => {HandlePageClick(e, '/login',contactSectionRef, navigate); closeMenu();}} ><strong> <FontAwesomeIcon icon={faSignInAlt} className="me-2" /> {t('login')}</strong></Link></li>
+            <li><Link className="dropdown-item"  onClick={(e) => {HandlePageClick(e, '/login',contactSectionRef, navigate); closeMenu();}} ><strong> <FontAwesomeIcon icon={faSignInAlt} className="me-2" /> {t('login')}</strong></Link></li>
           )}
         </ul>
-         <button className="btn btn-outline-light btn-sm me-2" onClick={toggleDarkMode} title="Toggle Theme" > {darkMode ? '🌙' : '☀️'} </button>
+         <button className="btn bg-secondary btn-outline-light btn-sm me-2" onClick={toggleDarkMode} title="Toggle Theme" > {darkMode ? '🌙' : '☀️'} </button>
       </div>
 
       {/* Blur Background */}
