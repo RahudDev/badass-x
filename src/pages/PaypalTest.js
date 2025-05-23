@@ -79,9 +79,9 @@ const PaypalTest = () => {
               boxShadow: selectedProductId === product.id ? "0 0 10px gold" : "none",
             }}
           >
-            <div className="card h-100">
+            <div className="card-nft h-100">
               <img src={product.imageUrl} className="card-img-top" alt={product.name} />
-              <div className="card-body">
+              <div className="card-body-nft">
                 <h5 className="card-title">{product.name}</h5>
                 <p className="card-text">${product.price.toFixed(2)}</p>
               </div>

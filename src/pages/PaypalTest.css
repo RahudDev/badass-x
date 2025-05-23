@@ -2,4 +2,9 @@
     border: 3px solid gold !important;
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
   }
+
+  .card-nft {
+    color: black;
+  }
+
   
