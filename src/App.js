@@ -60,6 +60,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { API_URL_MAIN, web_client, bajuhitam, DOMAIN } from './config';
 import GameSpinner from './pages/GameSpinner';
 import DeviceInfo from './pages/capacitorcheck';
+import BlogCollection from './pages/BlogCollection';
+import BlogRoutes from './Router/BlogRoutes';
 
 
 const API = API_URL_MAIN.split(',');
@@ -642,6 +644,8 @@ const App = () => {
             <Route path="/three" element={<ThreePage />} />
             <Route path="/ai-generator" element={<AiTextGenerator />} />
             <Route path="/paypal-test" element={<PaypalTest />} />
+             <Route path="/blog" element={<BlogCollection />} />
+             <Route path="/blog/*" element={<BlogRoutes />} />
             <Route path="/paypal-successpage" element={<PaypalSuccess />} />
             <Route path="/leaderboard" element={isVerified ? <Leaderboard /> : <Navigate to="/login" />} />
             <Route path="/survey-cpx" element={isVerified ? <SurveyDashboard /> : <Navigate to="/login" />} />
