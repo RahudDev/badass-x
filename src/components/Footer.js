@@ -17,7 +17,9 @@ import it_flag from './assets/italian_flag.jpg';
 import ar_flag from './assets/arabic_flag.jpg';
 import hi_flag from './assets/hindi_flag.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faFacebook, faTwitter, faGooglePlay, faLinkedin  } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faFacebook, faTwitter, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
+import { faBlog } from '@fortawesome/free-solid-svg-icons';
+
 
 
 
@@ -119,8 +121,8 @@ const Footer = () => {
           </a>
           </li>
            <li>
-          <a href="https://www.linkedin.com/in/optimisticash" className='app-link'>
-          <FontAwesomeIcon icon={faLinkedin} className='icon_media' />
+          <a href="/blog" className='app-link'>
+          <FontAwesomeIcon icon={faBlog} className='icon_media' />
           <span></span>
           </a>
           </li>
