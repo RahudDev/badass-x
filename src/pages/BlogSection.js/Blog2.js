@@ -1,11 +1,12 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+
 const Blog2 = () => {
   return (
     <div className="container py-5">
       <h1 className="fw-bold mb-4">How OptimistiCash Turns Points into Real Money</h1>
-      <img src="https://via.placeholder.com/800x400?text=Real+Money" alt="Real Money" className="img-fluid rounded-4 mb-4" />
       <p className="text-muted">Posted on August 9, 2025</p>
 
       <p>OptimistiCash uses a seamless points-to-cash conversion system designed to reward users for their time. With every action you take—whether it's answering a survey, downloading an app, or referring a friend—you earn points that can be easily redeemed for real-world currencies.</p>

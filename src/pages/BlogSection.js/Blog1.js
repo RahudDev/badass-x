@@ -1,11 +1,13 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../BlogCollection.css';
+
+
 
 const Blog1 = () => {
   return (
     <div className="container py-5">
       <h1 className="fw-bold mb-4">Top 5 Ways to Earn Points on OptimistiCash</h1>
-      <img src="https://via.placeholder.com/800x400?text=Earn+Points" alt="Earn Points" className="img-fluid rounded-4 mb-4" />
       <p className="text-muted">Posted on August 10, 2025</p>
 
       <p>OptimistiCash offers a dynamic way to earn real money by completing simple tasks. Whether you're a student, a stay-at-home parent, or someone looking to make a few extra dollars, OptimistiCash provides you with the tools to maximize your earnings. Here are the top 5 ways you can start earning more points today:</p>

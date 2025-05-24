@@ -1,15 +1,13 @@
 import React from 'react';
 
+
+
 const Blog6 = () => {
   return (
     <div className="container py-5">
       <h1 className="mb-4">How to Complete Offers Faster on OptimistiCash</h1>
       <p className="text-muted">Published on August 5, 2025</p>
-      <img
-        src="https://via.placeholder.com/800x400?text=Faster+Offers"
-        alt="Complete Offers Faster"
-        className="img-fluid rounded mb-4"
-      />
+    
       <p>
         Completing offers is one of the fastest ways to earn points on OptimistiCash, but sometimes it
         can feel time-consuming. Fortunately, there are strategies and tips you can use to speed up

@@ -1,15 +1,13 @@
 import React from 'react';
 
+
+
 const Blog3 = () => {
   return (
     <div className="container py-5">
       <h1 className="mb-4">Best Survey Sites That Pay in 2025</h1>
       <p className="text-muted">Published on August 8, 2025</p>
-      <img
-        src="https://via.placeholder.com/800x400?text=Survey+Sites"
-        alt="Best Survey Sites That Pay in 2025"
-        className="img-fluid rounded mb-4"
-      />
+  
       <p>
         In 2025, the world of online surveys continues to evolve with more platforms offering genuine rewards
         and opportunities to earn money in your spare time. Choosing the right survey sites can be overwhelming,

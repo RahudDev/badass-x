@@ -1,15 +1,13 @@
 import React from 'react';
 
+
+
 const Blog4 = () => {
   return (
     <div className="container py-5">
       <h1 className="mb-4">Bitcoin vs PayPal: Which Payout Method is Better?</h1>
       <p className="text-muted">Published on August 7, 2025</p>
-      <img
-        src="https://via.placeholder.com/800x400?text=Bitcoin+vs+PayPal"
-        alt="Bitcoin vs PayPal"
-        className="img-fluid rounded mb-4"
-      />
+     
       <p>
         When it comes to choosing how to get paid from online platforms like OptimistiCash, two popular payout
         methods stand out: Bitcoin and PayPal. Both have their advantages and drawbacks depending on what you

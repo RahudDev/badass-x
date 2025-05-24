@@ -1,15 +1,12 @@
 import React from 'react';
 
+
+
 const Blog9 = () => {
   return (
     <div className="container py-5">
       <h1 className="mb-4">Why OptimistiCash is the Best GPT Site in 2025</h1>
       <p className="text-muted">Published on August 2, 2025</p>
-      <img
-        src="https://via.placeholder.com/800x400?text=Best+GPT+Site"
-        alt="OptimistiCash GPT Site"
-        className="img-fluid rounded mb-4"
-      />
       <p>
         In the crowded world of GPT (Get Paid To) platforms, OptimistiCash has quickly risen to the top
         in 2025. But what makes it stand out from the rest? Whether you're a seasoned earner or just

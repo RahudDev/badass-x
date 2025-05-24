@@ -1,15 +1,12 @@
 import React from 'react';
 
+
 const Blog7 = () => {
   return (
     <div className="container py-5">
       <h1 className="mb-4">What is $cuan and How Do You Use It?</h1>
       <p className="text-muted">Published on August 4, 2025</p>
-      <img
-        src="https://via.placeholder.com/800x400?text=About+$cuan"
-        alt="$cuan Currency"
-        className="img-fluid rounded mb-4"
-      />
+    
       <p>
         If you’ve recently joined OptimistiCash, you’ve probably noticed a unique currency called
         <strong> $cuan</strong>. But what exactly is it, and how does it work? Think of $cuan as your digital

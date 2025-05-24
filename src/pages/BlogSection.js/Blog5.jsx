@@ -1,15 +1,12 @@
 import React from 'react';
 
+
+
 const Blog5 = () => {
   return (
     <div className="container py-5">
       <h1 className="mb-4">Play Games, Earn Money: Here's How</h1>
       <p className="text-muted">Published on August 6, 2025</p>
-      <img
-        src="https://via.placeholder.com/800x400?text=Play+and+Earn"
-        alt="Play Games, Earn Money"
-        className="img-fluid rounded mb-4"
-      />
       <p>
         Did you know that playing games online can be more than just fun? With OptimistiCash, you can
         turn your gaming hours into real earnings. The platform integrates with several top reward games

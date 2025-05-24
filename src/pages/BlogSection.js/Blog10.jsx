@@ -1,15 +1,11 @@
 import React from 'react';
 
+
 const Blog10 = () => {
   return (
     <div className="container py-5">
       <h1 className="mb-4">10 Ways to Stack More Bonuses on OptimistiCash</h1>
       <p className="text-muted">Published on August 1, 2025</p>
-      <img
-        src="https://via.placeholder.com/800x400?text=Bonus+Tips"
-        alt="Bonus Tips"
-        className="img-fluid rounded mb-4"
-      />
       <p>
         Bonuses are one of the best parts of using OptimistiCash. While most users stick to basic
         tasks, savvy earners know how to unlock hidden and compounding bonuses that add up fast. Want

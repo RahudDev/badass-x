@@ -1,0 +1,12 @@
+body.dark-mode p .text-date-blog  {
+    color: white;
+}
+
+.card-img-top-blog {
+    width: 350px;
+    height: 200px;
+}
+
+.card-body-blog {
+    width: 350px;
+}

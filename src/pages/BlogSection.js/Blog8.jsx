@@ -1,15 +1,13 @@
 import React from 'react';
 
+
+
 const Blog8 = () => {
   return (
     <div className="container py-5">
       <h1 className="mb-4">Avoid These Mistakes When Earning on OptimistiCash</h1>
       <p className="text-muted">Published on August 3, 2025</p>
-      <img
-        src="https://via.placeholder.com/800x400?text=Avoid+Mistakes"
-        alt="Avoid Mistakes on OptimistiCash"
-        className="img-fluid rounded mb-4"
-      />
+    
       <p>
         New to OptimistiCash? Awesome! You’re on the right track to turning your spare time into real
         rewards. But if you want to succeed quickly, it’s important to avoid some common mistakes that
