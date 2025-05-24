@@ -1,16 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+  <!-- Static Pages -->
+  <url>
+    <loc>https://optimisticash.com/about</loc>
+    <lastmod>2025-08-30</lastmod>
+  </url>
+  <url>
+    <loc>https://optimisticash.com/terms-of-service</loc>
+    <lastmod>2025-08-30</lastmod>
+  </url>
+  <url>
+    <loc>https://optimisticash.com/privacy-policy</loc>
+    <lastmod>2025-08-30</lastmod>
+  </url>
 
-<url>
-  <loc>https://optimisticash.com/about</loc>
-  <lastmod>2024-08-30T08:27:48+00:00</lastmod>
-</url>
-
+  <!-- Blog Posts using numeric paths -->
+  <url>
+    <loc>https://optimisticash.com/blog/1</loc>
+    <lastmod>2025-08-08</lastmod>
+  </url>
+  <url>
+    <loc>https://optimisticash.com/blog/2</loc>
+    <lastmod>2025-08-07</lastmod>
+  </url>
+  <url>
+    <loc>https://optimisticash.com/blog/3</loc>
+    <lastmod>2025-08-06</lastmod>
+  </url>
+  <url>
+    <loc>https://optimisticash.com/blog/4</loc>
+    <lastmod>2025-08-05</lastmod>
+  </url>
+  <url>
+    <loc>https://optimisticash.com/blog/5</loc>
+    <lastmod>2025-08-04</lastmod>
+  </url>
+  <url>
+    <loc>https://optimisticash.com/blog/6</loc>
+    <lastmod>2025-08-03</lastmod>
+  </url>
+  <url>
+    <loc>https://optimisticash.com/blog/7</loc>
+    <lastmod>2025-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://optimisticash.com/blog/8</loc>
+    <lastmod>2025-08-01</lastmod>
+  </url>
+  <url>
+    <loc>https://optimisticash.com/blog/9</loc>
+    <lastmod>2025-07-31</lastmod>
+  </url>
+  <url>
+    <loc>https://optimisticash.com/blog/10</loc>
+    <lastmod>2025-07-30</lastmod>
+  </url>
 
 </urlset>
