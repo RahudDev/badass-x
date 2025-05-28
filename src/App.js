@@ -630,7 +630,7 @@ const App = () => {
             <Route path="/mainpage" element={isVerified ? <MainPage userPoints={userPoints} />: <Navigate to="/login" />} />
             <Route path="/redeem" element={isVerified ? <RedeemPage userPoints={userPoints}/> : <Navigate to="/login" />} />
             <Route path="/chat-room" element={isVerified ? <ChatPanel /> : <Navigate to="/login" />} />
-            <Route path="/referral-link" element={isVerified ? <ReferralLink /> : <Navigate to="/login" />} />
+            <Route path="/referral-link" element={<ReferralLink/>} />
             <Route path="/referral-stats" element={isVerified ? <ReferralStats /> : <Navigate to="/login" />} />
             <Route path="/config" element={<Config />} />
             <Route path="/forget-password" element={!isVerified ? <ForgotPassword /> : <Navigate to="/dashboard"/>} />

@@ -6,38 +6,38 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Cookies from 'js-cookie';
 import './referrallink.css';
 
-
 function ReferralLink() {
     const [referralLink, setReferralLink] = useState('');
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
     const [copySuccess, setCopySuccess] = useState('');
     const [shareError, setShareError] = useState('');
+    const [showReferralSection, setShowReferralSection] = useState(false);
+    const [notLoggedIn, setNotLoggedIn] = useState(false);
 
     useEffect(() => {
-        // Fetch user details from localStorage or context
         const token = localStorage.getItem('token');
-        const uuid = Cookies.get('uuid'); // Assuming you store user ID in localStorage
-        const userId = encodeURIComponent(uuid)
+        const uuid = Cookies.get('uuid');
 
-        if (!token || !userId) {
-            setError('User not authenticated');
+        if (!token || !uuid) {
+            setNotLoggedIn(true);
+            setShowReferralSection(false);
             setLoading(false);
             return;
         }
 
-        // Fetch the referral link from the server
+        const userId = encodeURIComponent(uuid);
         axios.get(`${API_URL}/api/generate-referral-link/${userId}`, {
             headers: {
-                'Authorization': `Bearer ${token}` // Include token in the request headers
+                'Authorization': `Bearer ${token}`
             }
         })
         .then(response => {
             setReferralLink(response.data.referralLink);
+            setShowReferralSection(true);
         })
         .catch(error => {
             console.error("There was an error fetching the referral link!", error);
-            setError('Failed to fetch referral link');
+            setShowReferralSection(false);
         })
         .finally(() => {
             setLoading(false);
@@ -66,15 +66,12 @@ function ReferralLink() {
 
     if (loading) {
         return (
-          <div className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
-            <div className="spinner-google" role="status">
-              <span className="visually-hidden">Loading affiliate...</span>
+            <div className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
+                <div className="spinner-google" role="status">
+                    <span className="visually-hidden">Loading affiliate...</span>
+                </div>
             </div>
-          </div>
         );
-      }
-    if (error) {
-        return <p>{error}</p>;
     }
 
     return (
@@ -98,26 +95,48 @@ function ReferralLink() {
                                     <li>Ensure that the users you refer have not used our app before. This means they should be new users who haven't previously registered or interacted with our platform from their browser.</li>
                                     <li>If the user is already part of our system, the referral link will not be valid for them.</li>
                                 </ul>
-                                <div className='text-center'>
-                                <p><strong>Your Referral Link:</strong></p>
-                                <div style={{
-                                  display: 'inline-block',
-                                  padding: '10px',
-                                  border: '1px solid black',
-                                  borderRadius: '5px',
-                                  boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
-                                    }}>
-                                   <p style={{ margin: 0 }}>{referralLink}</p>
-                               </div>
-                                <Button variant="primary" className="mt-2" onClick={handleCopyLink}>
-                                    Copy Link
-                                </Button>
-                                {copySuccess && <p className="mt-2 text-success">{copySuccess}</p>}
-                                <Button variant="success" className="mt-2" onClick={handleShare}>
-                                    Share Link
-                                </Button>
-                                {shareError && <p className="mt-2 text-danger">{shareError}</p>}
-                                </div>
+
+                                {notLoggedIn && (
+
+                                   <div className='text-center mt-4'>
+                                        <p><strong>Your Referral Link:</strong></p>
+                                        <div style={{
+                                            display: 'inline-block',
+                                            padding: '10px',
+                                            border: '1px solid black',
+                                            borderRadius: '5px',
+                                            boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                                        }}>
+                                            <p style={{ margin: 0 }}>Please log in to see your referral link.</p>
+                                        </div>
+                                        <Button variant="primary" className="mt-2" href="/login">
+                                            Login
+                                        </Button>
+                                    </div>
+                                )}
+
+                                {showReferralSection && (
+                                    <div className='text-center mt-4'>
+                                        <p><strong>Your Referral Link:</strong></p>
+                                        <div style={{
+                                            display: 'inline-block',
+                                            padding: '10px',
+                                            border: '1px solid black',
+                                            borderRadius: '5px',
+                                            boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                                        }}>
+                                            <p style={{ margin: 0 }}>{referralLink}</p>
+                                        </div>
+                                        <Button variant="primary" className="mt-2" onClick={handleCopyLink}>
+                                            Copy Link
+                                        </Button>
+                                        {copySuccess && <p className="mt-2 text-success">{copySuccess}</p>}
+                                        <Button variant="success" className="mt-2" onClick={handleShare}>
+                                            Share Link
+                                        </Button>
+                                        {shareError && <p className="mt-2 text-danger">{shareError}</p>}
+                                    </div>
+                                )}
                             </Card.Text>
                         </Card.Body>
                     </Card>

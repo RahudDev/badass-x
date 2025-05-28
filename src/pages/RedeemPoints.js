@@ -8,7 +8,6 @@ import Cookies from 'js-cookie';
 import { API_URL } from '../App';
 import paypal_logo from "./assets/paypal_logo.jpg";
 import litecoin_logo from "./assets/litecoin_logo.png";
-import skrill_logo from "./assets/skrill_logo.jpg";
 import * as bitcoin from 'bitcoinjs-lib'; // Library to validate Litecoin
 import * as coininfo from 'coininfo'; // For Litecoin network info
 
@@ -91,7 +90,7 @@ const validateLitecoinAddress = (address) => {
 
     let paymentDetails = '';
 
-    if (paymentMethod === 'PayPal' || paymentMethod === 'Skrill') {
+    if (paymentMethod === 'PayPal') {
       paymentDetails = handleEmailPrompt(paymentMethod);
     } else if (paymentMethod === 'Litecoin') {
       paymentDetails = handleLitecoinPrompt();
@@ -201,7 +200,7 @@ const validateLitecoinAddress = (address) => {
                 <Form.Group>
                   <Form.Label>Payment Method</Form.Label>
                   <Row>
-                    <Col md={4}>
+                    <Col md={6}>
                       <Card className="payment-method-card" onClick={() => setPaymentMethod('PayPal')}>
                         <Card.Img variant="top" src={paypal_logo} className="payment-method-image" />
                         <Card.Body>
@@ -216,22 +215,7 @@ const validateLitecoinAddress = (address) => {
                         </Card.Body>
                       </Card>
                     </Col>
-                    <Col md={4}>
-                      <Card className="payment-method-card" onClick={() => setPaymentMethod('Skrill')}>
-                        <Card.Img variant="top" src={skrill_logo} className="payment-method-image" />
-                        <Card.Body>
-                          <Card.Title>Skrill</Card.Title>
-                          <Form.Check 
-                            type="radio" 
-                            name="paymentMethod" 
-                            value="Skrill" 
-                            checked={paymentMethod === 'Skrill'}
-                            onChange={() => setPaymentMethod('Skrill')}
-                          />
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                    <Col md={4}>
+                    <Col md={6}>
                       <Card className="payment-method-card" onClick={() => setPaymentMethod('Litecoin')}>
                         <Card.Img variant="top" src={litecoin_logo} className="payment-method-image" />
                         <Card.Body>

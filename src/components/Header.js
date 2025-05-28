@@ -80,6 +80,18 @@ useEffect(() => {
               <li className="nav-item">
                 <Link className="nav-link text-white" onClick={(e) => HandlePageClick(e, '/tasks',contactSectionRef, navigate)}> <FontAwesomeIcon icon={faListCheck} /> {t('tasks')}</Link>
               </li> &nbsp;&nbsp;
+
+                {/* Affiliates Section */}
+            {!isLoggedIn && (
+               <li className="nav-item">
+                 <Link className="nav-link text-white" onClick={(e) => HandlePageClick(e, '/referral-link', contactSectionRef, navigate)}>
+                   <FontAwesomeIcon icon={faUsers} className="me-2" />Affiliates
+                     </Link>
+                      </li>
+                           )}
+
+
+
               {isLoggedIn ? (
               <li className="nav-item dropdown">
                 <Dropdown>
@@ -137,26 +149,70 @@ useEffect(() => {
       </nav>
 
       {/* Mobile Slide-In Menu */}
-      <div className={`slide-menu  ${isMenuOpen ? 'open' : ''}`}>
-        <button className="close-button" onClick={closeMenu}>×</button>
-        <ul className="slide-menu-list ">
-          <li><Link className="dropdown-item" onClick={(e) => {HandlePageClick(e, isLoggedIn ? '/dashboard' : '/home',contactSectionRef, navigate); closeMenu();}}><strong> <FontAwesomeIcon icon={isLoggedIn ? faTachometerAlt : faHome} className="me-2" /> { isLoggedIn ? 'Dashboard' : t('home')}</strong></Link></li>
-          <li><Link className="dropdown-item" onClick={(e) => {HandlePageClick(e, isLoggedIn ? '/profile' : '/tasks',contactSectionRef, navigate); closeMenu();}}><strong> <FontAwesomeIcon icon={isLoggedIn ? faUser : faListCheck} className="me-2" /> { isLoggedIn ? 'Your Profile' : t('tasks')}</strong></Link></li>
-          <li><Link className="dropdown-item" onClick={(e) => {HandlePageClick(e,  isLoggedIn ? '/history' : '/about',contactSectionRef, navigate); closeMenu();}}><strong> <FontAwesomeIcon icon={isLoggedIn ? faClock : faCircleInfo} className="me-2" /> { isLoggedIn ? 'Your History' : t('about_us')}</strong></Link></li>
-          {isLoggedIn && (
-            <>
-            <li><Link className="dropdown-item" onClick={(e) => {HandlePageClick(e, '/line-chart',contactSectionRef, navigate); closeMenu();}}><strong><FontAwesomeIcon icon={faChartLine} className="me-2" /> Insight</strong></Link></li>
-              <li><Link className="dropdown-item" onClick={(e) => {HandlePageClick(e, '/referral-link',contactSectionRef, navigate); closeMenu();}}><strong><FontAwesomeIcon icon={faHandshake} className="me-2" /> Affiliate Program</strong></Link></li>
-              <li><Link className="dropdown-item" onClick={(e) => {HandlePageClick(e, '/referral-stats',contactSectionRef, navigate); closeMenu();}}><strong> <FontAwesomeIcon icon={faChartBar} className="me-2" /> Your Affiliate Stats</strong></Link></li>
-              <li> <button className="dropdown-item" onClick={handleLogout}><strong> <FontAwesomeIcon icon={faDoorOpen} className="me-2" /> Logout</strong></button></li>
-            </>
-          )}
-          {!isLoggedIn && (
-            <li><Link className="dropdown-item"  onClick={(e) => {HandlePageClick(e, '/login',contactSectionRef, navigate); closeMenu();}} ><strong> <FontAwesomeIcon icon={faSignInAlt} className="me-2" /> {t('login')}</strong></Link></li>
-          )}
-        </ul>
-         <button className="btn bg-secondary btn-outline-light btn-sm me-2" onClick={toggleDarkMode} title="Toggle Theme" > {darkMode ? '🌙' : '☀️'} </button>
-      </div>
+     <div className={`slide-menu  ${isMenuOpen ? 'open' : ''}`}>
+  <button className="close-button" onClick={closeMenu}>×</button>
+  <ul className="slide-menu-list ">
+    <li>
+      <Link className="dropdown-item" onClick={(e) => { HandlePageClick(e, isLoggedIn ? '/dashboard' : '/home', contactSectionRef, navigate); closeMenu(); }}>
+        <strong> <FontAwesomeIcon icon={isLoggedIn ? faTachometerAlt : faHome} className="me-2" /> {isLoggedIn ? 'Dashboard' : t('home')}</strong>
+      </Link>
+    </li>
+
+    <li>
+      <Link className="dropdown-item" onClick={(e) => { HandlePageClick(e, isLoggedIn ? '/profile' : '/tasks', contactSectionRef, navigate); closeMenu(); }}>
+        <strong> <FontAwesomeIcon icon={isLoggedIn ? faUser : faListCheck} className="me-2" /> {isLoggedIn ? 'Your Profile' : t('tasks')}</strong>
+      </Link>
+    </li>
+
+    <li>
+      <Link className="dropdown-item" onClick={(e) => { HandlePageClick(e, isLoggedIn ? '/history' : '/about', contactSectionRef, navigate); closeMenu(); }}>
+        <strong> <FontAwesomeIcon icon={isLoggedIn ? faClock : faCircleInfo} className="me-2" /> {isLoggedIn ? 'Your History' : t('about_us')}</strong>
+      </Link>
+    </li>
+
+    {isLoggedIn ? (
+      <>
+        <li>
+          <Link className="dropdown-item" onClick={(e) => { HandlePageClick(e, '/line-chart', contactSectionRef, navigate); closeMenu(); }}>
+            <strong><FontAwesomeIcon icon={faChartLine} className="me-2" /> Insight</strong>
+          </Link>
+        </li>
+        <li>
+          <Link className="dropdown-item" onClick={(e) => { HandlePageClick(e, '/referral-link', contactSectionRef, navigate); closeMenu(); }}>
+            <strong><FontAwesomeIcon icon={faHandshake} className="me-2" /> Affiliate Program</strong>
+          </Link>
+        </li>
+        <li>
+          <Link className="dropdown-item" onClick={(e) => { HandlePageClick(e, '/referral-stats', contactSectionRef, navigate); closeMenu(); }}>
+            <strong> <FontAwesomeIcon icon={faChartBar} className="me-2" /> Your Affiliate Stats</strong>
+          </Link>
+        </li>
+        <li>
+          <button className="dropdown-item" onClick={handleLogout}>
+            <strong> <FontAwesomeIcon icon={faDoorOpen} className="me-2" /> Logout</strong>
+          </button>
+        </li>
+      </>
+    ) : (
+      <>
+        <li>
+          <Link className="dropdown-item" onClick={(e) => { HandlePageClick(e, '/referral-link', contactSectionRef, navigate); closeMenu(); }}>
+            <strong><FontAwesomeIcon icon={faUsers} className="me-2" /> Affiliates</strong>
+          </Link>
+        </li>
+        <li>
+          <Link className="dropdown-item" onClick={(e) => { HandlePageClick(e, '/login', contactSectionRef, navigate); closeMenu(); }}>
+            <strong> <FontAwesomeIcon icon={faSignInAlt} className="me-2" /> {t('login')}</strong>
+          </Link>
+        </li>
+      </>
+    )}
+  </ul>
+  <button className="btn bg-secondary btn-outline-light btn-sm me-2" onClick={toggleDarkMode} title="Toggle Theme">
+    {darkMode ? '🌙' : '☀️'}
+  </button>
+</div>
+
 
       {/* Blur Background */}
       {isMenuOpen && <div className="blur-background" onClick={closeMenu}></div>}
