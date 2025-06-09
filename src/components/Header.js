@@ -84,7 +84,7 @@ useEffect(() => {
                 {/* Affiliates Section */}
             {!isLoggedIn && (
                <li className="nav-item">
-                 <Link className="nav-link text-white" onClick={(e) => HandlePageClick(e, '/referral-link', contactSectionRef, navigate)}>
+                 <Link className="nav-link text-white" onClick={(e) => HandlePageClick(e, '/affiliate-program', contactSectionRef, navigate)}>
                    <FontAwesomeIcon icon={faUsers} className="me-2" />Affiliates
                      </Link>
                       </li>
@@ -196,7 +196,7 @@ useEffect(() => {
     ) : (
       <>
         <li>
-          <Link className="dropdown-item" onClick={(e) => { HandlePageClick(e, '/referral-link', contactSectionRef, navigate); closeMenu(); }}>
+          <Link className="dropdown-item" onClick={(e) => { HandlePageClick(e, '/affiliate-program', contactSectionRef, navigate); closeMenu(); }}>
             <strong><FontAwesomeIcon icon={faUsers} className="me-2" /> Affiliates</strong>
           </Link>
         </li>

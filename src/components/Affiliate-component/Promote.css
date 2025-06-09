@@ -1,0 +1,25 @@
+.section-aff-promote {
+  overflow: hidden;
+  background: linear-gradient(to bottom, #ffffff, #e6f7ff 60%, #b0d8ff);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-left: 3%; /* Add space from the left */
+  padding-top: -5%; /* Add space from the top */
+  gap : 40px;
+  color: black;
+}
+
+
+.section-aff-promote-h2 {
+    color: #03123a;
+}
+
+body.dark-mode .section-aff-promote {
+  background: linear-gradient(135deg, #121212, #03123a);
+  background-size: 400% 400%;
+  animation: gradientShiftDark 5s ease infinite;
+  color: #fff;
+  transition: background 5s ease, color 5s ease;
+}
+

@@ -62,6 +62,7 @@ import GameSpinner from './pages/GameSpinner';
 import DeviceInfo from './pages/capacitorcheck';
 import BlogCollection from './pages/BlogCollection';
 import BlogRoutes from './Router/BlogRoutes';
+import AffiliatePage from './pages/AffiliatePage';
 
 
 const API = API_URL_MAIN.split(',');
@@ -647,6 +648,7 @@ const App = () => {
              <Route path="/blog" element={<BlogCollection />} />
              <Route path="/blog/*" element={<BlogRoutes />} />
             <Route path="/paypal-successpage" element={<PaypalSuccess />} />
+            <Route path="/affiliate-program" element={<AffiliatePage />} />
             <Route path="/leaderboard" element={isVerified ? <Leaderboard /> : <Navigate to="/login" />} />
             <Route path="/survey-cpx" element={isVerified ? <SurveyDashboard /> : <Navigate to="/login" />} />
             <Route path="/bitlabs-offers" element={isVerified ? <OffersPagebitlabs/> : <Navigate to="/login" />} />
